@@ -11,6 +11,8 @@
 
 .img{
   flex-shrink: 0; /* Impede que a imagem encolha */
+    border:4px;
+  border-color: #ffffff;
 }
 
 .img-img {
@@ -18,7 +20,8 @@
   height: auto; /* Manter a proporção da imagem */
   border-radius: 16px; /* Bordas arredondadas */
   border:4px;
-  border-color:#ffffff;
+  border-color: #ffffff;
+
 }
 
 .texto {
