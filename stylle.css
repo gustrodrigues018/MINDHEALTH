@@ -17,6 +17,8 @@
   width: 600px; /* Largura da imagem */
   height: auto; /* Manter a proporção da imagem */
   border-radius: 16px; /* Bordas arredondadas */
+  border:4px;
+  border-color:#ffffff;
 }
 
 .texto {
