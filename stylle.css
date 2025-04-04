@@ -9,7 +9,7 @@
   flex-direction: row-reverse; /* Inverte a ordem dos itens */
 }
 
-.img2 {
+.img{
   flex-shrink: 0; /* Impede que a imagem encolha */
 }
 
@@ -20,6 +20,7 @@
 }
 
 .texto {
+  margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
   max-width: 600px; /* Largura máxima do texto */
 }
 
@@ -203,6 +204,10 @@ body {
 #titulo-pilares {
     color: #ffffff; /* Branco */
     margin-bottom: 1vh; /* Espaçamento abaixo do título */
+    text-align:center;
+    font-size:40px;
+    margin: 0vh 0vw 9vh 0vw;
+
 }
 
 #subtitulo-pilares {
