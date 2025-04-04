@@ -216,7 +216,6 @@ body {
 }
 
 #subtitulo-pilares {
-  
     color: #82b9de; /* Azul claro */
     margin-bottom: 1vh; /* Espaçamento abaixo do subtítulo */
 }
@@ -226,6 +225,22 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
+}
+
+#subtitulo-pilares1 {
+    color: #82b9de; /* Azul claro */
+    margin-bottom: 1vh; /* Espaçamento abaixo do subtítulo */
+    margin: 6vh 0vw 0vh 0vw;
+
+}
+
+#texto-pilares1 {
+    color: #ffffff; /* Branco */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px; /* Tamanho da fonte em vw */
+    margin-bottom: 2vh; /* Espaçamento abaixo do texto */
+      margin: 6vh 0vw 0vh 0vw;
+
 }
 
 #missao {
