@@ -264,8 +264,11 @@ body {
 }
 
 #titulo-missao {
+      font-size: 40px; /* Tamanho da fonte em vw */
     color: #003366; /* Azul escuro */
     margin-bottom: 1vh; /* Espaçamento abaixo do título */
+      text-align:center;
+
 }
 
 #texto-missao {
@@ -273,6 +276,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
+      text-align:center;
+
 }
 
 #visao {
