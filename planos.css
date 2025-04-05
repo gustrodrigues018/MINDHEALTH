@@ -3,8 +3,9 @@ body {
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    background-color: #022548; /* Azul claro */
+    background-color: #003366; /* Novo fundo da página */
 }
+
 .nav {
     background-color: #022548;
     width: 100%;
@@ -246,11 +247,13 @@ body {
 
 .contato-item {
     font-size: 18px;
-    background-color: #022548;
+    background-color: #ffffff; /* Fundo branco nos campos */
+    color: #003366; /* Texto azul escuro para contraste */
     padding: 15px 20px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
 }
+
 
 .contato-item a {
     color: #82b9de;
