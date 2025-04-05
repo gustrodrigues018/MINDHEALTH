@@ -276,19 +276,18 @@ body {
 }
 
 #visao {
-    margin-bottom: 4vh; /* Espaçamento abaixo da seção de visão */
-    background-color: #003366; /* Azul escuro */
+    margin-bottom: 4vh;
+    background-color: #003366;
     border-radius: 8px;
-    padding: 2vw; /* Espaçamento interno em vw */
+    padding: 2vw;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #titulo-visao {
-    color: #ffffff; /* Branco */
-    margin-bottom: 1vh; /* Espaçamento abaixo do título */
-    text-align:center;
-    font-size:40px;
-    margin: 0vh 0vw 4vh 0vw;
+    color: #ffffff;
+    text-align: center;
+    font-size: 40px;
+    margin: 0 0 3vh 0;
 }
 
 #subtitulo-visao {
@@ -296,16 +295,14 @@ body {
     margin-bottom: 1vh; /* Espaçamento abaixo do subtítulo */
 }
 
-#texto-visao {
-    color: #ffffff; /* Branco */
+.texto-visao {
+    color: #ffffff;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
-    text-align:center;
-  line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 10px; /* Espaço entre parágrafos */
-    margin: 0vw 6vh 1vw 20vh; /* Margens conforme necessário */
-
-/* Tamanho da fonte em vw */}
+    text-align: center;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
 
     .valores-container {
         display: flex;
