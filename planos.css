@@ -154,6 +154,7 @@ body {
 }
 
 .titulo-secao {
+    margin:4vh 0vw 0vh 0vw;
     font-size: 36px;
     color: #ffffff;
     margin-bottom: 40px;
@@ -165,7 +166,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 40px; /* Espaçamento aumentado */
+    gap: 70px; /* Espaçamento aumentado */
 }
 
 /* Cards */
