@@ -221,7 +221,7 @@ body {
     margin-bottom: 1vh; /* Espaçamento abaixo do título */
     text-align:center;
     font-size:40px;
-    margin: 0.7vh 0vw 9vh 0vw;
+    margin: 1vh 0vw 9vh 0vw;
 
 }
 
@@ -298,6 +298,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     text-align:center;
+  line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 10px; /* Espaço entre parágrafos */
     margin: -3vw 6vh 1vw 20vh; /* Margens conforme necessário */
 
 /* Tamanho da fonte em vw */}
