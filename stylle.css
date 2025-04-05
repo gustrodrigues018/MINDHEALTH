@@ -274,7 +274,7 @@ body {
 #texto-missao {
     color: #003366; /* Azul escuro */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px; /* Tamanho da fonte em vw */
+    font-size: 25px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
       text-align:center;
 
@@ -289,7 +289,7 @@ body {
 }
 
 #titulo-visao {
-       font-size: 30px; /* Tamanho da fonte em vw */
+       font-size: 50px; /* Tamanho da fonte em vw */
     color: #ffffff; /* Azul escuro */
     margin-bottom: 1vh; /* Espaçamento abaixo do título */
       text-align:center;
@@ -303,7 +303,7 @@ body {
 #texto-visao {
     color: #ffffff; /* Azul escuro */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 30px; /* Tamanho da fonte em vw */
+    font-size: 25px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
       text-align:center;
 }
