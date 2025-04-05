@@ -288,7 +288,7 @@ body {
     margin-bottom: 1vh; /* Espaçamento abaixo do título */
     text-align:center;
     font-size:40px;
-    margin: 0vh 0vw 4vh 0vw;
+    margin: 0vh 0vw 0vh 0vw;
 }
 
 #subtitulo-visao {
@@ -303,7 +303,7 @@ body {
     text-align:center;
   line-height: 1.6; /* Espaçamento entre linhas */
     margin-bottom: 10px; /* Espaço entre parágrafos */
-    margin: 0vw 6vh 1vw 20vh; /* Margens conforme necessário */
+    margin: 0vw 6vh 2vw 30vh; /* Margens conforme necessário */
 }
     .valores-container {
         display: flex;
