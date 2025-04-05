@@ -24,6 +24,21 @@
 
 }
 
+.img3{
+  flex-shrink: 0; /* Impede que a imagem encolha */
+    border:4px;
+  border-color: #ffffff;
+}
+
+.img3-img {
+  width: 400px; /* Largura da imagem */
+  height: auto; /* Manter a proporção da imagem */
+  border-radius: 16px; /* Bordas arredondadas */
+  border:4px;
+  border-color: #ffffff;
+
+}
+
 .texto {
   margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
   max-width: 600px; /* Largura máxima do texto */
