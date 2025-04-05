@@ -303,7 +303,7 @@ body {
     text-align:center;
   line-height: 1.6; /* Espaçamento entre linhas */
     margin-bottom: 10px; /* Espaço entre parágrafos */
-    margin: 0vw 6vh 2vw 30vh; /* Margens conforme necessário */
+    margin: 0vw 0vh 2vw 6vh; /* Margens conforme necessário */
 }
     .valores-container {
         display: flex;
