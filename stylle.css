@@ -235,7 +235,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
-    margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
+    margin: 2vw 6vh 2vw 6vh; /* Margens conforme necessário */
   max-width: 600px; /* Largura máxima do texto */
 }
 
@@ -251,7 +251,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
-  margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
+  margin: 2vw 6vh 2vw 6vh; /* Margens conforme necessário */
   max-width: 600px; /* Largura máxima do texto */
 }
 
@@ -296,7 +296,9 @@ body {
 #texto-visao {
     color: #ffffff; /* Branco */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px; /* Tamanho da fonte em vw */}
+    font-size: 20px;
+    text-align:center;
+/* Tamanho da fonte em vw */}
 
     .valores-container {
         display: flex;
