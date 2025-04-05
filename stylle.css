@@ -315,8 +315,8 @@ body {
     }
     
     .valor {
-        width: 300px; /* Largura do círculo */
-        height: 300px; /* Altura do círculo */
+        width: 250px; /* Largura do círculo */
+        height: 250px; /* Altura do círculo */
         border-radius: 50%; /* Faz o elemento ser um círculo */
         background-color: #003366; /* Azul escuro */
         border: 2px solid #007acc; /* Azul claro */
