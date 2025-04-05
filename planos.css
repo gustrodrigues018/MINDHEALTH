@@ -3,7 +3,7 @@ body {
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    background-color: #003366; /* Novo fundo da página */
+    background-color: #022548; /* Novo fundo da página */
 }
 
 .nav {
@@ -155,7 +155,7 @@ body {
 
 .titulo-secao {
     font-size: 36px;
-    color: #003366;
+    color: #ffffff;
     margin-bottom: 40px;
 }
 
