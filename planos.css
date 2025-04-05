@@ -155,7 +155,7 @@ body {
   }
 
 #planos {
-    padding: 40px;
+    padding: 60px 20px;
     background-color: #f4f8fc;
     text-align: center;
 }
@@ -168,54 +168,69 @@ body {
 
 .container-planos {
     display: flex;
-    flex-direction: column;
+    flex-direction: row; /* Deixa os cards lado a lado */
+    justify-content: center;
     gap: 30px;
-    align-items: center;
+    flex-wrap: wrap; /* Responsivo para telas menores */
 }
 
 .plano-card {
     background-color: #ffffff;
     border-radius: 12px;
-    padding: 25px;
-    width: 90%;
-    max-width: 600px;
+    padding: 20px;
+    width: 280px; /* Mais achatado e uniforme */
+    height: 330px; /* Altura fixa mais baixa */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .plano-card:hover {
-    transform: scale(1.02);
+    transform: scale(1.03);
 }
 
 .plano-card h3 {
-    font-size: 28px;
+    font-size: 24px;
     color: #003366;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .plano-card p {
-    margin: 8px 0;
-    font-size: 16px;
+    margin: 6px 0;
+    font-size: 14px;
 }
 
 .plano-card ul {
     list-style: none;
     padding-left: 0;
-    font-size: 15px;
+    font-size: 14px;
+    text-align: left;
+    margin-top: 10px;
 }
 
 .plano-card li {
     margin-bottom: 6px;
 }
 
+/* Cores de borda lateral */
 .basic {
-    border-left: 8px solid #7cc6fe;
+    border-top: 6px solid #7cc6fe;
 }
 
 .premium {
-    border-left: 8px solid #0088cc;
+    border-top: 6px solid #0088cc;
 }
 
+/* Destaque no plano executivo */
+.executivo {
+    border-top: 6px solid #ff9900;
+    background-color: #fff8ec;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    transform: scale(1.05);
+    z-index: 2;
+}
 .executivo {
     border-left: 8px solid #003366;
 }
