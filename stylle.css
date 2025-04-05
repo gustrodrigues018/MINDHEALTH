@@ -289,12 +289,10 @@ body {
 }
 
 #titulo-visao {
-    color: #ffffff; /* Branco */
+       font-size: 40px; /* Tamanho da fonte em vw */
+    color: #ffffff; /* Azul escuro */
     margin-bottom: 1vh; /* Espaçamento abaixo do título */
-    text-align:center;
-    font-size:40px;
-  line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 10px; /* Espaço entre parágrafos */
+      text-align:center;
 }
 
 #subtitulo-visao {
@@ -303,13 +301,11 @@ body {
 }
 
 #texto-visao {
-    color: #ffffff; /* Branco */
+    color: #ffffff; /* Azul escuro */
     font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px;
-    text-align:center;
-  line-height: 1.6; /* Espaçamento entre linhas */
-    margin-bottom: 10px; /* Espaço entre parágrafos */
-    margin: 0vw 0vh 2vw 6vh; /* Margens conforme necessário */
+    font-size: 20px; /* Tamanho da fonte em vw */
+    margin-bottom: 2vh; /* Espaçamento abaixo do texto */
+      text-align:center;
 }
     .valores-container {
         display: flex;
