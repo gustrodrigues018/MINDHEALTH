@@ -39,11 +39,6 @@
 
 }
 
-.texto {
-  margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
-  max-width: 600px; /* Largura máxima do texto */
-}
-
 #subtitulo-pilares {
   margin-bottom: 16px;
 }
@@ -240,6 +235,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
+    margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
+  max-width: 600px; /* Largura máxima do texto */
 }
 
 #subtitulo-pilares1 {
@@ -254,8 +251,8 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
-      margin: 6vh 0vw 0vh 0vw;
-
+  margin: 0vw 6vh 0vw 6vh; /* Margens conforme necessário */
+  max-width: 600px; /* Largura máxima do texto */
 }
 
 #missao {
