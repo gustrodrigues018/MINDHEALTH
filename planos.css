@@ -154,12 +154,18 @@ body {
 }
 
 .titulo-secao {
-    margin:8vh 0vw 0vh 0vw;
+    margin:4vh 0vw 0vh 0vw;
     font-size: 36px;
     color: #ffffff;
     margin-bottom: 40px;
 }
 
+.titulo-coontato {
+    margin:6vh 0vw 0vh 0vw;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 40px;
+}
 .container-planos {
     display: flex;
     flex-direction: row;
