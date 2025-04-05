@@ -168,27 +168,25 @@ body {
 
 .container-planos {
     display: flex;
-    flex-direction: row; /* Deixa os cards lado a lado */
+    flex-direction: row;
     justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
     gap: 30px;
-    flex-wrap: wrap; /* Responsivo para telas menores */
 }
 
+/* Cards */
 .plano-card {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 20px;
-    width: 280px; /* Mais achatado e uniforme */
-    height: 330px; /* Altura fixa mais baixa */
+    width: 280px;
+    height: 330px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
-
-.plano-card:hover {
-    transform: scale(1.03);
 }
 
 .plano-card h3 {
@@ -214,7 +212,7 @@ body {
     margin-bottom: 6px;
 }
 
-/* Cores de borda lateral */
+/* Específicos */
 .basic {
     border-top: 6px solid #7cc6fe;
 }
@@ -223,15 +221,11 @@ body {
     border-top: 6px solid #0088cc;
 }
 
-/* Destaque no plano executivo */
+/* Destaque no executivo */
 .executivo {
     border-top: 6px solid #ff9900;
     background-color: #fff8ec;
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.07);
     z-index: 2;
 }
-.executivo {
-    border-left: 8px solid #003366;
-}
-
