@@ -235,7 +235,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px; /* Tamanho da fonte em vw */
     margin-bottom: 2vh; /* Espaçamento abaixo do texto */
-    margin: 2vw 6vh 1vw 6vh; /* Margens conforme necessário */
+    margin: 1vw 6vh 0vw 6vh; /* Margens conforme necessário */
   max-width: 600px; /* Largura máxima do texto */
 }
 
@@ -298,7 +298,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
     text-align:center;
-    margin: 3vw 6vh 1vw 20vh; /* Margens conforme necessário */
+    margin: 1vw 6vh 1vw 20vh; /* Margens conforme necessário */
 
 /* Tamanho da fonte em vw */}
 
