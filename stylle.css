@@ -284,10 +284,11 @@ body {
 }
 
 #titulo-visao {
-    color: #ffffff;
-    text-align: center;
-    font-size: 40px;
-    margin: 0 0 3vh 0;
+    color: #ffffff; /* Branco */
+    margin-bottom: 1vh; /* Espaçamento abaixo do título */
+    text-align:center;
+    font-size:40px;
+    margin: 0vh 0vw 4vh 0vw;
 }
 
 #subtitulo-visao {
@@ -295,15 +296,15 @@ body {
     margin-bottom: 1vh; /* Espaçamento abaixo do subtítulo */
 }
 
-.texto-visao {
-    color: #ffffff;
+#texto-visao {
+    color: #ffffff; /* Branco */
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
-    text-align: center;
-    line-height: 1.6;
-    margin-bottom: 10px;
+    text-align:center;
+  line-height: 1.6; /* Espaçamento entre linhas */
+    margin-bottom: 10px; /* Espaço entre parágrafos */
+    margin: 0vw 6vh 1vw 20vh; /* Margens conforme necessário */
 }
-
     .valores-container {
         display: flex;
         flex-wrap: wrap;
