@@ -175,7 +175,7 @@ body {
 .container img {
   max-width: 100%; /* Para a imagem não ultrapassar os limites do contêiner */
   height: auto; /* Mantém a proporção da imagem */
-  margin: 0vh 0vw 0vh 6vw;
+  margin: 0vh 0vw 0vh 4vw;
 }
 
 
