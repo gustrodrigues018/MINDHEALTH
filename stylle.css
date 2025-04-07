@@ -162,6 +162,7 @@ body {
   margin-bottom: 2vh;
 }
 
+/* Pilares */
 #pilares {
   margin-bottom: 4vh;
   background-color: #003366;
@@ -170,27 +171,105 @@ body {
   border-radius: 8px;
   padding: 2vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 3vw; /* Espaço entre os blocos de conteúdo */
+  align-items: center; /* Centraliza os itens */
 }
 
+/* Títulos dos pilares */
 #titulo-pilares {
   color: #ffffff;
   margin-bottom: 1vh;
   text-align: center;
   font-size: 3vw; /* Ajuste da fonte */
+  margin: 1vh 0vw 3vh 0vw; /* Margens ajustadas */
 }
 
+/* Subtítulos dos pilares */
 #subtitulo-pilares {
   color: #82b9de;
   margin-bottom: 1vh;
+  font-size: 2.5vw; /* Ajuste do tamanho da fonte para subtítulos */
+  text-align: center;
 }
 
-#texto-pilares {
+#subtitulo-pilares1 {
+  color: #82b9de;
+  margin-bottom: 1vh;
+  font-size: 2.5vw;
+  text-align: center;
+}
+
+/* Textos dos pilares */
+#texto-pilares, #texto-pilares1 {
   color: #ffffff;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  margin: 1vw 6vh;
-  max-width: 600px;
+  font-size: 2vw; /* Ajuste do tamanho da fonte */
+  margin: 2vh 5vw;
+  text-align: justify;
+  max-width: 800px; /* Largura máxima para o texto */
 }
+
+@media (max-width: 1200px) {
+  /* Ajustes para telas grandes, como tablets e pequenos desktops */
+  #titulo-pilares {
+    font-size: 4vw; /* Ajuste do título */
+  }
+  
+  #subtitulo-pilares, #subtitulo-pilares1 {
+    font-size: 3vw; /* Ajuste do subtítulo */
+  }
+  
+  #texto-pilares, #texto-pilares1 {
+    font-size: 1.5vw; /* Ajuste no texto */
+    max-width: 600px;
+    margin: 1vw 4vh;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ajustes para tablets e dispositivos menores */
+  #titulo-pilares {
+    font-size: 6vw;
+  }
+  
+  #subtitulo-pilares, #subtitulo-pilares1 {
+    font-size: 4vw;
+  }
+  
+  #texto-pilares, #texto-pilares1 {
+    font-size: 3.5vw;
+    margin: 2vw 4vh;
+    max-width: 90%; /* Ajustar a largura do texto */
+  }
+  
+  #pilares {
+    padding: 4vw;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Ajustes para telas de celular */
+  #titulo-pilares {
+    font-size: 8vw;
+  }
+  
+  #subtitulo-pilares, #subtitulo-pilares1 {
+    font-size: 6vw;
+  }
+  
+  #texto-pilares, #texto-pilares1 {
+    font-size: 4.5vw;
+    margin: 2vw 3vh;
+    max-width: 100%;
+  }
+  
+  #pilares {
+    padding: 5vw;
+  }
+}
+
 
 #missao {
   margin-bottom: 4vh;
