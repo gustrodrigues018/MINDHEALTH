@@ -15,8 +15,16 @@
   flex-shrink: 0;
 }
 
-.img-img, .img3-img {
+.img-img{
   width: 100%; /* Tornar a imagem responsiva */
+  max-width: 600px; /* Largura máxima para as imagens */
+  height: auto;
+  border-radius: 16px;
+  border: 4px solid #ffffff;
+}
+
+.img3-img {
+  width: 600px; /* Tornar a imagem responsiva */
   max-width: 600px; /* Largura máxima para as imagens */
   height: auto;
   border-radius: 16px;
