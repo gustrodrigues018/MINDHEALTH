@@ -158,9 +158,36 @@ body {
   }
 }
 
+/* Banner */
 .banner {
-  margin-bottom: 2vh;
+  background-color: #003366; /* Azul escuro */
+  width: 100%; /* Largura da viewport */
+  border-radius: 8px;
+  padding: 2vw; /* Espaçamento interno em vw */
+  display: flex;
+  justify-content: center; /* Alinha o conteúdo no centro */
+  align-items: center; /* Alinha o conteúdo verticalmente */
 }
+
+/* Ajuste de Responsividade para a Banner */
+@media (max-width: 1200px) {
+  .banner {
+    padding: 3vw; /* Ajuste de padding para telas menores */
+  }
+}
+
+@media (max-width: 768px) {
+  .banner {
+    padding: 4vw; /* Mais espaçamento interno em telas menores */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner {
+    padding: 5vw; /* Ajuste de padding para telas de celulares */
+  }
+}
+
 
 #pilares {
     margin-bottom: 4vh; /* Espaçamento abaixo da seção de missão */
