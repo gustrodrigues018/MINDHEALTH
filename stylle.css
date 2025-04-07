@@ -166,7 +166,6 @@ body {
     margin-bottom: 4vh; /* Espaçamento abaixo da seção de missão */
     background-color: #003366; /* Azul escuro */
     width: 98vw; /* Largura da viewport */
-    max-width: 1850px; /* Largura máxima para telas grandes */
     border-radius: 8px;
     padding: 2vw; /* Espaçamento interno em vw */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
