@@ -326,3 +326,91 @@ body {
 .valor:hover {
   filter: none;
 }
+
+.titulo-section {
+  font-size: 2rem;
+  color: #006666;
+  margin-bottom: 1rem;
+  border-left: 5px solid #00b3b3;
+  padding-left: 10px;
+}
+
+.subtitulo-section {
+  font-size: 1.5rem;
+  color: #009999;
+  margin-bottom: 0.75rem;
+}
+
+.subtitulo-caso {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #007777;
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Parágrafos e texto */
+.texto-section,
+.depoimento,
+ul {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1rem;
+}
+
+ul {
+  padding-left: 20px;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+  list-style-type: "✔️ ";
+}
+
+/* Blocos */
+.bloco-sobre,
+.bloco-diferenciais,
+.bloco-depoimentos {
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  margin-bottom: 40px;
+}
+
+.bloco-casos {
+  background-color: #eefafa;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+/* Depoimentos */
+.depoimento {
+  font-style: italic;
+  border-left: 3px solid #00cccc;
+  padding-left: 15px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .titulo-section {
+    font-size: 1.5rem;
+  }
+
+  .subtitulo-section,
+  .subtitulo-caso {
+    font-size: 1.2rem;
+  }
+
+  .texto-section,
+  .depoimento,
+  ul {
+    font-size: 0.95rem;
+  }
+
+  .bloco-sobre,
+  .bloco-diferenciais,
+  .bloco-depoimentos {
+    padding: 20px;
+  }
