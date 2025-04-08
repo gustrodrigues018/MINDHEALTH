@@ -145,7 +145,7 @@ body {
 }
 
 .plano-card ul {
-    list-style: none;
+    list-style-type: circle;
     padding-left: 0;
     font-size: 17px;
     text-align: left;
