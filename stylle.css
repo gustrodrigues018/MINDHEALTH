@@ -447,3 +447,41 @@ ul li {
   .bloco-depoimentos {
     padding: 20px;
   }
+
+.bloco-casos {
+  color: #000000;
+  font-family: 'Georgia', serif;
+  font-size: 18px;
+  line-height: 1.6;
+  background-color: #ffffff;
+  padding: 2vw;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.bloco-casos h4.subtitulo-caso {
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin-top: 2vh;
+}
+
+.bloco-casos p {
+  color: #000000;
+  margin-bottom: 1vh;
+}
+
+.bloco-casos ul {
+  padding-left: 20px;
+  margin-bottom: 2vh;
+}
+
+.bloco-casos li {
+  margin-bottom: 0.5vh;
+  color: #000000;
+}
+
+.bloco-casos em {
+  font-style: italic;
+  color: #000000;
+}
