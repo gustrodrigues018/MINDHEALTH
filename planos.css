@@ -216,7 +216,7 @@ body {
 }
 
 .plano-card:hover {
-    transform: scale(3.05);
+    transform: scale(1.10);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
