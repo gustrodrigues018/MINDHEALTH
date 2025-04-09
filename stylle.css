@@ -376,7 +376,7 @@ body {
 }
 
 .subtitulo-caso {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: 600;
   color: #009999;
   margin-top: 1.5rem;
@@ -386,10 +386,15 @@ body {
 }
 
 /* Parágrafos e texto */
-.texto-section,
+.texto-section{
+  font-size: 1.5rem;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
 .depoimento,
 ul {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: #ffffff;
   margin-bottom: 1rem;
 }
