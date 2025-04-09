@@ -180,7 +180,7 @@ body {
   max-width: 100%; /* Para a imagem não ultrapassar os limites do contêiner */
   width:98vw;
   height: auto; /* Mantém a proporção da imagem */
-  margin: 0vh 0vw 0vh 1vw;
+  margin: 0vh 0vw 0vh 0vw;
 }
 
 
