@@ -234,9 +234,7 @@ body {
 
 /* MISSÃO */
 #missao {
-  margin-bottom: 4vh;
   background-color: #ffffff;
-  border-radius: 16px;
   padding: 3vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
@@ -263,9 +261,7 @@ body {
 
 /* VISÃO */
 #visao {
-  margin-bottom: 4vh;
   background: linear-gradient(135deg, #003366, #005b99);
-  border-radius: 16px;
   padding: 3vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
