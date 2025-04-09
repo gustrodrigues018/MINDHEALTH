@@ -31,16 +31,23 @@
         
 <section id="pilares">
     <h2 id="titulo-pilares">Os Pilares do Nosso Projeto</h2>
-    <div class="pilar"> <!-- Adicionando um contêiner para o texto e a imagem -->
+
+    <div class="pilar">
+        <!-- Imagem no topo -->
+        <div class="img" style="text-align: center;">
+            <img src="aeroterapia.jpg" alt="Banner do Projeto MindHealth" class="img-img" style="max-width: 100%; height: auto; margin-bottom: 20px;">
+        </div>
+
         <div class="texto">
-            <p><h2 id="subtitulo-pilares">1. Aeroterapia com VR</h2></p>
-            <p id="texto-pilares">Simulações realistas para enfrentar medos a aeroterapia com</p>
-            <p id="texto-pilares">realidade virtual (VR) é uma abordagem inovadora para ajudar</p>
-            <p id="texto-pilares">pessoas a enfrentarem o medo de voar utilizando simulações</p>
-            <p id="texto-pilares">altamente realistas, essa terapia expõe gradualmente os</p>
-            <p id="texto-pilares">usuários a diferentes situações de voo, como decolagem,</p>
-            <p id="texto-pilares">turbulência e pouso, em um ambiente seguro e controlado.</p>
-            <button onclick="document.getElementById('saiba-mais').style.display='block'" style="margin-top: 10px;">Saiba Mais</button>
+            <h2 id="subtitulo-pilares">1. Aeroterapia com VR</h2>
+            <p id="texto-pilares">
+                A aeroterapia com realidade virtual (VR) é uma abordagem inovadora que utiliza simulações altamente realistas para ajudar pessoas a enfrentarem o medo de voar. A terapia expõe gradualmente os usuários a diferentes situações de voo, como decolagem, turbulência e pouso, em um ambiente seguro e controlado.
+            </p>
+
+            <!-- Botão que alterna visibilidade -->
+            <button onclick="toggleSaibaMais()" style="margin-top: 10px;">Saiba Mais</button>
+
+            <!-- Conteúdo oculto -->
             <div id="saiba-mais" style="display: none; margin-top: 15px;">
                 <h3>Validação Científica da Aeroterapia</h3>
                 <ul>
@@ -81,10 +88,19 @@
                 </ul>
             </div>
         </div>
-        <div class="img">
-            <img src="aeroterapia.jpg" alt="Banner do Projeto MindHealth" class="img-img">
-        </div>
     </div>
+</section>
+
+<script>
+    function toggleSaibaMais() {
+        var conteudo = document.getElementById("saiba-mais");
+        if (conteudo.style.display === "none") {
+            conteudo.style.display = "block";
+        } else {
+            conteudo.style.display = "none";
+        }
+    }
+</script>
 
     <div class="pilar par">
     <div class="texto">
