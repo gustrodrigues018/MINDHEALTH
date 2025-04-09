@@ -457,7 +457,7 @@ ul li {
   color:black;
  }
 
-.botao-saiba-mais {
+.botao {
     margin: 0vh 0vw 0vh 3vw;
     padding: 10px 20px;
     background-color: #4CAF50; /* verde suave */
@@ -470,6 +470,6 @@ ul li {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.botao-saiba-mais:hover {
+.botao:hover {
     background-color: #45a049; /* tom mais escuro no hover */
 }
