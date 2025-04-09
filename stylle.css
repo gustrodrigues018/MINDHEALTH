@@ -456,20 +456,3 @@ ul li {
  .bloco-diferenciais{
   color:black;
  }
-
-#botao {
-    margin: 0vh 0vw 0vh 3vw;
-    padding: 10px 20px;
-    background-color: #4CAF50; /* verde suave */
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-#botao:hover {
-    background-color: #45a049; /* tom mais escuro no hover */
-}
