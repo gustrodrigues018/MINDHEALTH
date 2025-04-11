@@ -345,7 +345,15 @@ body {
 }
 
 
+.valor:nth-child(even) {
+  background-color: white;
+  color: #003366;
+}
 
+.valores-container .valor:not(:hover) {
+  filter: blur(4px);
+  transition: filter 0.3s ease;
+}
 .valor:hover {
   filter: none;
 }
