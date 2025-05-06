@@ -387,6 +387,12 @@ body {
   margin-bottom: 1rem;
 }
 
+.texto-sobre{
+  font-size: 1.4rem;
+  color: #003366;
+  margin-bottom: 1rem;
+}
+
 .depoimento,
 ul {
   font-size: 1.3rem;
