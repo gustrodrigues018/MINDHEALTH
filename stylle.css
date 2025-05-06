@@ -1,7 +1,7 @@
- html {
+html {
   scroll-behavior: smooth;
 }
- 
+
 .pilar {
   display: flex;
   align-items: flex-start;
@@ -19,17 +19,9 @@
   flex-shrink: 0;
 }
 
-.img-img{
-  width: 100%; /* Tornar a imagem responsiva */
-  max-width: 600px; /* Largura máxima para as imagens */
-  height: auto;
-  border-radius: 16px;
-  border: 4px solid #ffffff;
-}
-
-.img3-img {
-  width: 600px; /* Tornar a imagem responsiva */
-  max-width: 600px; /* Largura máxima para as imagens */
+.img-img, .img3-img {
+  width: 100%;
+  max-width: 600px;
   height: auto;
   border-radius: 16px;
   border: 4px solid #ffffff;
@@ -44,12 +36,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #022548;
-  color: #ffffff;
+  background-color: #faf3e0; /* Alterado para bege claro */
+  color: #333; /* Texto em cinza escuro */
 }
 
 .nav {
-  background-color: #022548;
+  background-color: #022548; /* Azul escuro permanece */
   width: 100%;
   height: 10%;
   border: none;
@@ -65,10 +57,8 @@ body {
 .menu a {
   text-decoration: none;
   color: #ffffff;
-  line-height: 0.4vh;
   font-family: "Garamond", sans-serif;
   margin: 0 1em;
-  display: inline-block;
   font-size: 1rem;
   margin: 0vh 4vw;
 }
@@ -78,7 +68,6 @@ body {
   color: #ffffff;
   padding: 1em;
   display: flex;
-   line-height: 1vh;
   justify-content: center;
   align-items: center;
   font-size: 10vw;
@@ -90,7 +79,7 @@ body {
   font-size: 3em;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: #fdfdfc;
+  color: #003366; /* Azul escuro para o título */
   text-align: center;
 }
 
@@ -125,12 +114,12 @@ body {
   }
 
   .pilar {
-    flex-direction: column; /* Empilhar as imagens e textos em telas menores */
+    flex-direction: column;
     gap: 4vw;
   }
 
   .img-img, .img3-img {
-    max-width: 80%; /* Reduzir a largura das imagens em telas menores */
+    max-width: 80%;
   }
 
   #texto-pilares, #texto-pilares1 {
@@ -161,78 +150,73 @@ body {
   }
 
   .pilar {
-    flex-direction: column; /* Empilhar itens em telas pequenas */
+    flex-direction: column;
     gap: 3vw;
   }
 
   .img-img, .img3-img {
-    max-width: 100%; /* Garantir que as imagens se ajustem bem */
+    max-width: 100%;
   }
 }
 
 .container {
   display: flex;
-  justify-content: center; /* Alinha horizontalmente */
-  align-items: center; /* Alinha verticalmente */
-  height: 100vh; /* Para garantir que o container tenha altura suficiente */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
 
 .container img {
-  max-width: 100%; /* Para a imagem não ultrapassar os limites do contêiner */
-  width:98vw;
-  height: auto; /* Mantém a proporção da imagem */
-  margin: 0vh 0vw 0vh 0vw;
+  max-width: 100%;
+  width: 98vw;
+  height: auto;
+  margin: 0;
+  border-radius: 8px;
 }
 
-
 #pilares {
-    margin-bottom: 4vh; /* Espaçamento abaixo da seção de missão */
-    background-color: #003366; /* Azul escuro */
-    width: 98vw; /* Largura da viewport */
-    border-radius: 8px;
-    padding: 2vw; /* Espaçamento interno em vw */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4vh;
+  background-color: #003366; /* Azul escuro */
+  width: 98vw;
+  border-radius: 8px;
+  padding: 2vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 #titulo-pilares {
-    color: #ffffff; /* Branco */
-    margin-bottom: 1vh; /* Espaçamento abaixo do título */
-    text-align:center;
-    font-size:40px;
-    margin: 1vh 0vw 9vh 0vw;
-
+  color: #ffffff;
+  margin-bottom: 1vh;
+  text-align: center;
+  font-size: 40px;
+  margin: 1vh 0vw 9vh 0vw;
 }
 
 #subtitulo-pilares {
-    color: #82b9de; /* Azul claro */
-    margin-bottom: 1vh; /* Espaçamento abaixo do subtítulo */
+  color: #82b9de; /* Azul claro */
+  margin-bottom: 1vh;
 }
 
 #texto-pilares {
-    color: #ffffff; /* Branco */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px; /* Tamanho da fonte em vw */
-    margin-bottom: 2vh; /* Espaçamento abaixo do texto */
-    margin: 1vw 6vh 0vw 6vh; /* Margens conforme necessário */
-  max-width: 600px; /* Largura máxima do texto */
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin: 1vw 6vh 0vw 6vh;
+  max-width: 600px;
 }
 
 #subtitulo-pilares1 {
-    color: #82b9de; /* Azul claro */
-    margin-bottom: 1vh; /* Espaçamento abaixo do subtítulo */
-    margin: 6vh 0vw 0vh 0vw;
-
+  color: #82b9de;
+  margin-bottom: 1vh;
+  margin: 6vh 0vw 0vh 0vw;
 }
 
 #texto-pilares1 {
-    color: #ffffff; /* Branco */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 20px; /* Tamanho da fonte em vw */
-    margin-bottom: 2vh; /* Espaçamento abaixo do texto */
-  margin: 3vw 6vh 3vw 6vh; /* Margens conforme necessário */
-  max-width: 600px; /* Largura máxima do texto */
+  color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 20px;
+  margin: 3vw 6vh 3vw 6vh;
+  max-width: 600px;
 }
-
 
 /* MISSÃO */
 #missao {
@@ -344,7 +328,6 @@ body {
   transform: translateY(0);
 }
 
-
 .valor:nth-child(even) {
   background-color: white;
   color: #003366;
@@ -354,8 +337,12 @@ body {
   filter: blur(4px);
   transition: filter 0.3s ease;
 }
+
 .valor:hover {
-  filter: none;
+  background-color: #007acc;
+  color: #ffffff;
+  filter: blur(0);
+  transition: filter 0.3s ease;
 }
 
 .titulo-section {
