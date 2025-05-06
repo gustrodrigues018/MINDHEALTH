@@ -330,8 +330,8 @@ body {
 }
 
 .valor:nth-child(even) {
-  background-color: white;
-  color: #003366; /* Azul escuro */
+  background-color: #009999;
+  color: #ffffff; /* Azul escuro */
 }
 
 .valores-container .valor:not(:hover) {
