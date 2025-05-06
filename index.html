@@ -25,8 +25,12 @@
     </header>
 
     <main>
-     <div class="container">
-  <img  id="index"src="Banner.png" alt="Imagem centralizada">
+    <div class="carousel-container" style="position: relative; max-width: 100%; overflow: hidden;">
+  <div class="carousel" id="carousel" style="display: flex; transition: transform 0.5s ease-in-out;">
+    <img src="banner1.png" alt="Banner 1" style="width: 100%; flex-shrink: 0;">
+    <img src="banner2.png" alt="Banner 2" style="width: 100%; flex-shrink: 0;">
+    <img src="banner3.png" alt="Banner 3" style="width: 100%; flex-shrink: 0;">
+  </div>
 </div>
         
 <section id="pilares" style="padding: 30px;">
@@ -104,11 +108,31 @@
     </div>
 
 <script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // Função para mostrar/ocultar o conteúdo "Saiba Mais"
     function toggleSaibaMais() {
-        const conteudo = document.getElementById("saiba-mais");
-        conteudo.style.display = (conteudo.style.display === "none" || conteudo.style.display === "") ? "block" : "none";
+      const conteudo = document.getElementById("saiba-mais");
+      conteudo.style.display = (conteudo.style.display === "none" || conteudo.style.display === "") ? "block" : "none";
     }
+
+    // Expondo a função no escopo global para que possa ser chamada pelo HTML (ex: onclick)
+    window.toggleSaibaMais = toggleSaibaMais;
+
+    // Lógica do carrossel de imagens
+    const carousel = document.getElementById('carousel');
+
+    if (carousel) {
+      let currentIndex = 0;
+      const totalSlides = carousel.children.length;
+
+      setInterval(() => {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+      }, 3000); // muda a imagem a cada 3 segundos
+    }
+  });
 </script>
+
 
 
    <div class="pilar par">
