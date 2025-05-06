@@ -177,7 +177,7 @@ body {
 
 #pilares {
   margin-bottom: 4vh;
-  background-color: #ffffff; /* Fundo branco */
+  background-color: #003366; /* Fundo branco */
   width: 98vw;
   border-radius: 8px;
   padding: 2vw;
@@ -185,7 +185,7 @@ body {
 }
 
 #titulo-pilares {
-  color: #003366; /* Azul escuro */
+  color: #ffffff; /* Azul escuro */
   margin-bottom: 1vh;
   text-align: center;
   font-size: 40px;
@@ -193,12 +193,12 @@ body {
 }
 
 #subtitulo-pilares {
-  color: #003366; /* Azul escuro */
+  color: #009999; /* Azul escuro */
   margin-bottom: 1vh;
 }
 
 #texto-pilares {
-  color: #003366; /* Azul escuro */
+  color: #ffffff; /* Azul escuro */
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   margin: 1vw 6vh 0vw 6vh;
@@ -206,13 +206,13 @@ body {
 }
 
 #subtitulo-pilares1 {
-  color: #003366; /* Azul escuro */
+  color: #009999; /* Azul escuro */
   margin-bottom: 1vh;
   margin: 6vh 0vw 0vh 0vw;
 }
 
 #texto-pilares1 {
-  color: #003366; /* Azul escuro */
+  color: #ffffff; /* Azul escuro */
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   margin: 3vw 6vh 3vw 6vh;
