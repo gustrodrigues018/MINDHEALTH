@@ -43,7 +43,7 @@ body {
 .nav {
   background-color: #022548; /* Azul escuro permanece */
   width: 100%;
-  height: 10%;
+  height: 60px; /* Ajustado para estar bem no topo */
   border: none;
   position: fixed;
   top: 0;
@@ -52,6 +52,7 @@ body {
   text-align: center;
   padding: 1em 0;
   box-sizing: border-box;
+  margin: 0;
 }
 
 .menu a {
@@ -197,7 +198,7 @@ body {
 }
 
 #texto-pilares {
-  color: #ffffff;
+  color: #003366; /* Azul escuro */
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   margin: 1vw 6vh 0vw 6vh;
@@ -211,7 +212,7 @@ body {
 }
 
 #texto-pilares1 {
-  color: #ffffff;
+  color: #003366; /* Azul escuro */
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 20px;
   margin: 3vw 6vh 3vw 6vh;
@@ -344,6 +345,7 @@ body {
   filter: blur(0);
   transition: filter 0.3s ease;
 }
+
 
 .titulo-section {
   font-size: 2rem;
