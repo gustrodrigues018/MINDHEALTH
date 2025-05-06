@@ -221,7 +221,7 @@ body {
 
 /* MISSÃO */
 #missao {
-  background-color: #ffffff;
+  background-color: #009999;
   padding: 3vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
@@ -229,7 +229,7 @@ body {
 
 #titulo-missao {
   font-size: 42px;
-  color: #003366; /* Azul escuro */
+  color: #ffffff; /* Azul escuro */
   margin-bottom: 2vh;
   text-align: center;
   font-weight: 700;
@@ -237,7 +237,7 @@ body {
 }
 
 #texto-missao {
-  color: #003366; /* Azul escuro */
+  color: #ffffff; /* Azul escuro */
   font-family: 'Georgia', serif;
   font-size: 22px;
   line-height: 1.6;
