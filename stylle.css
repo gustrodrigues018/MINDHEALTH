@@ -36,12 +36,12 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #faf3e0; /* Alterado para bege claro */
-  color: #333; /* Texto em cinza escuro */
+  background-color: #ffffff; /* Alterado para fundo branco */
+  color: #003366; /* Texto em azul escuro */
 }
 
 .nav {
-  background-color: #022548; /* Azul escuro permanece */
+  background-color: #003366; /* Azul escuro permanece */
   width: 100%;
   height: 60px; /* Ajustado para estar bem no topo */
   border: none;
@@ -177,7 +177,7 @@ body {
 
 #pilares {
   margin-bottom: 4vh;
-  background-color: #003366; /* Azul escuro */
+  background-color: #ffffff; /* Fundo branco */
   width: 98vw;
   border-radius: 8px;
   padding: 2vw;
@@ -185,7 +185,7 @@ body {
 }
 
 #titulo-pilares {
-  color: #ffffff;
+  color: #003366; /* Azul escuro */
   margin-bottom: 1vh;
   text-align: center;
   font-size: 40px;
@@ -193,7 +193,7 @@ body {
 }
 
 #subtitulo-pilares {
-  color: #82b9de; /* Azul claro */
+  color: #003366; /* Azul escuro */
   margin-bottom: 1vh;
 }
 
@@ -206,7 +206,7 @@ body {
 }
 
 #subtitulo-pilares1 {
-  color: #82b9de;
+  color: #003366; /* Azul escuro */
   margin-bottom: 1vh;
   margin: 6vh 0vw 0vh 0vw;
 }
@@ -229,7 +229,7 @@ body {
 
 #titulo-missao {
   font-size: 42px;
-  color: #003366;
+  color: #003366; /* Azul escuro */
   margin-bottom: 2vh;
   text-align: center;
   font-weight: 700;
@@ -237,7 +237,7 @@ body {
 }
 
 #texto-missao {
-  color: #003366;
+  color: #003366; /* Azul escuro */
   font-family: 'Georgia', serif;
   font-size: 22px;
   line-height: 1.6;
@@ -310,7 +310,7 @@ body {
   width: 210px;
   height: 210px;
   border-radius: 50%;
-  background-color: #003366;
+  background-color: #003366; /* Azul escuro */
   border: 2px solid #007acc;
   display: flex;
   align-items: center;
@@ -331,7 +331,7 @@ body {
 
 .valor:nth-child(even) {
   background-color: white;
-  color: #003366;
+  color: #003366; /* Azul escuro */
 }
 
 .valores-container .valor:not(:hover) {
@@ -345,7 +345,6 @@ body {
   filter: blur(0);
   transition: filter 0.3s ease;
 }
-
 
 .titulo-section {
   font-size: 2rem;
