@@ -5,14 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindHealth</title>
     <link rel="stylesheet" href="planos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <main>
+
       <section id="planos">
         <h2 class="titulo-secao">Nossos Planos</h2>
         <div class="container-planos">
-            
             <div class="plano-card basic">
                 <h3>Plano Basic</h3>
                 <p><strong>Valor:</strong> R$ 59,90/mês</p>
@@ -24,7 +23,6 @@
                     <li>Diário de humor</li>
                     <li>Suporte emocional leve</li>
                 </ul>
-                <button class="btn-assinar">Assinar agora</button>
             </div>
 
             <div class="plano-card executivo">
@@ -38,11 +36,9 @@
                     <li>Sessões em grupo</li>
                     <li>Relatórios coletivos</li>
                 </ul>
-                <button class="btn-assinar">Assinar agora</button>
             </div>
 
-            <div class="plano-card premium destaque">
-                <div class="selo">Mais Popular</div>
+            <div class="plano-card premium">
                 <h3>Plano Premium</h3>
                 <p><strong>Valor:</strong> R$ 199,90/mês</p>
                 <p><strong>Público-alvo:</strong> Pessoas físicas</p>
@@ -54,9 +50,7 @@
                     <li>IA e sensores</li>
                     <li>🎁 Óculos VR incluso (trimestral)</li>
                 </ul>
-                <button class="btn-assinar">Assinar agora</button>
             </div>
-
         </div>
 
         <h2 class="titulo-contato">Fale Conosco</h2>
@@ -73,5 +67,25 @@
         </div>
       </section>
     </main>
+
+    <script>
+        // Script para aumentar o card ao passar o cursor
+        document.addEventListener("DOMContentLoaded", function() {
+            const planos = document.querySelectorAll('.plano-card');
+
+            planos.forEach(plano => {
+                plano.addEventListener('mouseenter', function() {
+                    plano.style.transform = 'scale(1.05)';
+                    plano.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
+                    plano.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+                });
+
+                plano.addEventListener('mouseleave', function() {
+                    plano.style.transform = 'scale(1)';
+                    plano.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
