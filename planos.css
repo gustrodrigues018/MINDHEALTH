@@ -15,12 +15,12 @@
     }
 
       #planos {
-padding: 5px 20px 60px; /* Menor padding-top */
-    margin-top: 40px; /* Opcional: define distância do topo real */    
+    padding: 0 20px 40px; /* Remove o espaçamento superior */
+    margin-top: 0; /* Elimina qualquer margem superior */
     }
 
     .container-planos {
-       margin-top: 10px; /* Adiciona leve margem caso precise */
+    margin-top: 0; /* Remove margem extra */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
