@@ -11,6 +11,8 @@ html {
   margin: 5vw auto;
   flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
   justify-content: center; /* Alinha os itens ao centro em telas pequenas */
+  flex: 1 1 300px;
+  box-sizing: border-box;
 }
 
 .pilar.par {
