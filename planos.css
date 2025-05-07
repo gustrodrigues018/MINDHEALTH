@@ -1,4 +1,3 @@
-<style>
     body {
         font-family: Arial, sans-serif;
         margin: 0;
@@ -16,14 +15,16 @@
     }
 
     #planos {
-        padding: 40px 20px 60px; /* menos espaço no topo */
-    }
+padding: 20px 20px 60px; /* Menor padding-top */
+    margin-top: 40px; /* Opcional: define distância do topo real */    }
 
     .container-planos {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 70px;
+       margin-top: 10px; /* Adiciona leve margem caso precise */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+
     }
 
     .titulo-contato {
@@ -186,4 +187,3 @@
     .btn-voltar-home:hover {
         background-color: #5fa1c8;
     }
-</style>
