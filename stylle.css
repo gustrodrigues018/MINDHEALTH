@@ -41,53 +41,41 @@ body {
 }
 
 .nav {
-  background-color: #003366; /* Azul escuro permanece */
+  background-color: #003366;
   width: 100%;
-  height: 70px; /* Ajustado para estar bem no topo */
-  border: none;
+  height: 70px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
-  text-align: center;
-  padding: 1em 0;
-  box-sizing: border-box;
-  margin: 0;
-  line-height: -2.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
 
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center;     /* Centraliza verticalmente */
+
+  box-sizing: border-box;
+  padding: 0;  /* sem padding vertical */
+}
+
+.menu {
+  display: flex;
+  gap: 2vw; /* espaçamento entre itens */
 }
 
 .menu a {
   text-decoration: none;
   color: #ffffff;
   font-family: "Garamond", sans-serif;
-  margin: 0 1em;
   font-size: 1rem;
-  margin: 0vh 4vw;
-    line-height: -2.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
-
-}
-
-#titulo {
-  text-transform: uppercase;
-  color: #ffffff;
-  padding: 1em;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 10vw;
-  font-family: "Helvetica Neue", sans-serif;
-  margin: 1vh 0;
 }
 
 #sitetitulo {
-  font-size: 3em;
+  font-size: 1.8em;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: #ffffff; /* Azul escuro para o título */
+  color: #ffffff;
   text-align: center;
-    line-height: -2.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
-
+  margin-right: 2vw;
 }
 
 /* Media Queries para Responsividade */
