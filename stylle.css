@@ -306,11 +306,18 @@ body {
 .valores-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center; /* Mais seguro que space-around */
   margin-bottom: 40px;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 0 2vw;
 }
 
+
 .valor {
+  width: clamp(150px, 25vw, 210px); /* Ajusta automaticamente com base na tela */
+  height: clamp(150px, 25vw, 210px);
+  margin: 15px;
   width: 210px;
   height: 210px;
   border-radius: 50%;
