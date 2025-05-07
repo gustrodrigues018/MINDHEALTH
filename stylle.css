@@ -75,7 +75,9 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-family: "Garamond", sans-serif;
-  font-size: 1.5em; /* fonte maior para o menu */
+  font-size: 1.3em; /* fonte maior para o menu */
+  margin: 3vw;
+
 }
 
 
