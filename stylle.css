@@ -1,6 +1,5 @@
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 
 }
 
@@ -184,7 +183,7 @@ body {
 #pilares {
   margin-bottom: 4vh;
   background-color: #003366; /* Fundo branco */
-  width: 98vw;
+  width: 96vw;
   border-radius: 8px;
   padding: 2vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
