@@ -22,7 +22,7 @@
         }
 
         #planos {
-            padding: 60px 35px;
+            padding: 60px 20px;
         }
 
         .container-planos {
@@ -97,8 +97,8 @@
         .plano-card {
             background-color: #ffffff;
             border-radius: 12px;
-            padding: 30px 30px;  /* Ajustei o padding para criar mais espaçamento */
-            width: 290px;
+            padding: 30px 20px;  /* Ajustei o padding para criar mais espaçamento */
+            width: 280px;
             height: 380px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
@@ -152,10 +152,51 @@
             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
+        /* Botão Voltar no canto superior esquerdo */
+        .btn-voltar {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            background-color: #006bb3;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+        }
+
+        .btn-voltar:hover {
+            background-color: #005499;
+        }
+
+        /* Botão para Voltar para Home */
+        .btn-voltar-home {
+            background-color: #7cc6fe;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            text-decoration: none;
+            margin-top: 40px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-voltar-home:hover {
+            background-color: #5fa1c8;
+        }
     </style>
 </head>
 <body>
     <main>
+        <div style="text-align: left;">
+            <a href="index.html" class="btn-voltar-home">Voltar para a Home</a>
+        </div>
         <section id="planos">
             <h2 class="titulo-secao">Nossos Planos</h2>
             <div class="container-planos">
@@ -219,23 +260,23 @@
                 </div>
             </div>
         </section>
+
+    
     </main>
+
+    <!-- Botão Voltar no canto superior esquerdo -->
+    <a href="index.html" class="btn-voltar">Voltar</a>
 
     <script>
         // Script para aumentar o card ao passar o cursor
         document.addEventListener("DOMContentLoaded", function() {
-            const planos = document.querySelectorAll('.plano-card');
-
-            planos.forEach(plano => {
-                plano.addEventListener('mouseenter', function() {
-                    plano.style.transform = 'scale(1.1)';
-                    plano.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
-                    plano.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
+            const planoCards = document.querySelectorAll('.plano-card');
+            planoCards.forEach(card => {
+                card.addEventListener('mouseover', function() {
+                    card.style.transform = 'scale(1.05)';
                 });
-
-                plano.addEventListener('mouseleave', function() {
-                    plano.style.transform = 'scale(1)';
-                    plano.style.boxShadow = '0 4px 12px rgba(0, 0, 0, 0.1)';
+                card.addEventListener('mouseout', function() {
+                    card.style.transform = 'scale(1)';
                 });
             });
         });
