@@ -43,7 +43,7 @@ body {
 .nav {
   background-color: #003366;
   width: 100%;
-  height: 60px; /* altura aumentada */
+  height: 70px; /* altura aumentada */
   position: fixed;
   top: 0;
   left: 0;
