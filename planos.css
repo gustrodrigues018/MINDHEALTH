@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Outfit', sans-serif;
     margin: 0;
     overflow-x: hidden;
     padding: 0;
-    background-color: #022548; /* Novo fundo da página */
+    background-color: #022548;
 }
 
+/* Navegação */
 .nav {
     background-color: #022548;
     width: 100%;
@@ -19,7 +22,8 @@ body {
     padding: 1em 0;
     box-sizing: border-box;
 }
-/* Title Styling */
+
+/* Título principal */
 #titulo {
     text-transform: uppercase;
     color: #ffffff;
@@ -32,7 +36,7 @@ body {
     margin: 3vh 0;
 }
 
-/* Site Title Styling */
+/* Subtítulo do site */
 #sitetitulo {
     font-size: 3em;
     font-family: 'Playfair Display', serif;
@@ -41,7 +45,7 @@ body {
     text-align: center;
 }
 
-/* Responsive Design Adjustments */
+/* Responsividade */
 @media (max-width: 1200px) {
     .nav {
         height: 8%;
@@ -70,6 +74,16 @@ body {
     #sitetitulo {
         font-size: 2em;
     }
+
+    .container-planos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .plano-card {
+        width: 90%;
+        height: auto;
+    }
 }
 
 @media (max-width: 480px) {
@@ -92,34 +106,32 @@ body {
     }
 }
 
+/* Seção de planos */
 #planos {
     padding: 60px 20px;
     text-align: center;
 }
 
-.titulo-secao {
-    margin:0vh 0vw 0vh 0vw;
+.titulo-secao, .titulo-contato {
     font-size: 36px;
     color: #ffffff;
     margin-bottom: 40px;
 }
 
 .titulo-contato {
-    margin:10vh 0vw 0vh 0vw;
-    font-size: 36px;
-    color: #ffffff;
-    margin-bottom: 40px;
+    margin-top: 10vh;
 }
+
 .container-planos {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
-    gap: 70px; /* Espaçamento aumentado */
+    gap: 70px;
 }
 
-/* Cards */
+/* Cartões dos planos */
 .plano-card {
     background-color: #ffffff;
     border-radius: 12px;
@@ -131,6 +143,20 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.7s forwards;
+}
+
+.plano-card:nth-child(1) { animation-delay: 0.2s; }
+.plano-card:nth-child(2) { animation-delay: 0.4s; }
+.plano-card:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .plano-card h3 {
@@ -149,18 +175,32 @@ body {
     padding-left: 0;
     font-size: 17px;
     text-align: left;
-    margin-top: 10px;
-    margin:0vh 0vw 0vh 1vw;
-
+    margin-left: 1vw;
 }
 
 .plano-card li {
     margin-bottom: 6px;
     font-size: 17px;
-
 }
 
-/* Específicos */
+/* Botão Assinar */
+.btn-assinar {
+    background-color: #003366;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-assinar:hover {
+    background-color: #005599;
+    cursor: pointer;
+}
+
+/* Tipos de plano */
 .basic {
     border-top: 6px solid #7cc6fe;
 }
@@ -169,7 +209,6 @@ body {
     border-top: 6px solid #0088cc;
 }
 
-/* Destaque no executivo */
 .executivo {
     border-top: 6px solid #ff9900;
     background-color: #fff8ec;
@@ -177,6 +216,34 @@ body {
     transform: scale(1.07);
 }
 
+/* Destaque no Premium */
+.destaque {
+    border: 2px solid #00bfff;
+    box-shadow: 0 0 25px rgba(0, 191, 255, 0.5);
+    position: relative;
+}
+
+.selo {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    background: #00bfff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+/* Hover no plano */
+.plano-card:hover {
+    transform: scale(1.20);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+/* Contato */
 #contato {
     background-color: #003366;
     color: #ffffff;
@@ -186,7 +253,7 @@ body {
 
 .contato-container {
     display: flex;
-    flex-direction: row; /* agora lado a lado */
+    flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
     gap: 20px;
@@ -196,12 +263,12 @@ body {
 
 .contato-item {
     font-size: 16px;
-    background-color: #ffffff; /* fundo branco */
+    background-color: #ffffff;
     color: #003366;
     padding: 10px 15px;
     border-radius: 10px;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-    flex: 1 1 200px; /* tamanho mínimo e flexível */
+    flex: 1 1 200px;
     max-width: 250px;
     text-align: center;
 }
@@ -214,13 +281,3 @@ body {
 .contato-item a:hover {
     text-decoration: underline;
 }
-
-.plano-card:hover {
-    transform: scale(1.20);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-}
-
-
-
