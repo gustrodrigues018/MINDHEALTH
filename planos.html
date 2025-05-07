@@ -8,46 +8,98 @@
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            overflow-x: hidden;
             padding: 0;
-            background-color: #022548; /* Novo fundo da página */
+            background-color: #022548; /* Cor de fundo escura */
+            overflow-x: hidden;
+        }
+
+        /* Título e layout geral */
+        .titulo-secao, .titulo-contato {
+            text-align: center;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 40px;
         }
 
         #planos {
             padding: 60px 20px;
-            text-align: center;
-        }
-
-        .titulo-secao {
-            margin: 0;
-            font-size: 36px;
-            color: #ffffff;
-            margin-bottom: 40px;
-        }
-
-        .titulo-contato {
-            margin: 10vh 0 0 0;
-            font-size: 36px;
-            color: #ffffff;
-            margin-bottom: 40px;
         }
 
         .container-planos {
             display: flex;
-            flex-direction: row;
-            justify-content: center;
-            align-items: flex-start;
             flex-wrap: wrap;
-            gap: 70px; /* Espaçamento aumentado */
+            justify-content: center;
+            gap: 70px;
         }
 
-        /* Cards */
+        .titulo-contato {
+            margin-top: 80px;
+            font-size: 36px;
+            color: #ffffff;
+        }
+
+        /* Estilos do Container de Contato */
+        .contato-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .contato-item {
+            background-color: #ffffff;
+            padding: 20px;
+            margin: 10px 0;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 18px;
+            color: #003366;
+        }
+
+        .contato-item a {
+            color: #006bb3;
+            text-decoration: none;
+        }
+
+        .contato-item a:hover {
+            text-decoration: underline;
+        }
+
+        .contato-item strong {
+            font-weight: 600;
+            color: #003366;
+        }
+
+        /* Botões do Card */
+        .btn-assinar {
+            background-color: #006bb3;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .btn-assinar:hover {
+            background-color: #005499;
+        }
+
+        /* Cards de Planos */
         .plano-card {
             background-color: #ffffff;
             border-radius: 12px;
             padding: 20px;
             width: 280px;
-            height: 380px; /* Aumentei um pouco a altura para os botões ficarem melhor posicionados */
+            height: 380px;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             display: flex;
@@ -80,7 +132,6 @@
             font-size: 17px;
         }
 
-        /* Específicos */
         .basic {
             border-top: 6px solid #7cc6fe;
         }
@@ -89,7 +140,6 @@
             border-top: 6px solid #0088cc;
         }
 
-        /* Destaque no executivo */
         .executivo {
             border-top: 6px solid #ff9900;
             background-color: #fff8ec;
@@ -97,27 +147,9 @@
             transform: scale(1.07);
         }
 
-        /* Botão de assinatura */
-        .btn-assinar {
-            background-color: #006bb3; /* Azul mais escuro */
-            color: white;
-            padding: 12px 25px;
-            font-size: 16px;
-            border-radius: 8px;
-            border: none;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            margin-top: 20px; /* Distância do conteúdo do card */
-        }
-
-        .btn-assinar:hover {
-            background-color: #005499; /* Azul ainda mais escuro no hover */
-        }
-
-        /* Efeito de aumento ao passar o cursor */
         .plano-card:hover {
-            transform: scale(1.1); /* Aumenta o card ao passar o cursor */
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
+            transform: scale(1.1);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
         }
 
     </style>
@@ -170,19 +202,22 @@
                     <button class="btn-assinar">Assinar</button>
                 </div>
             </div>
+        </section>
 
-             <h2 class="titulo-contato">Fale Conosco</h2>
-        <div class="contato-container">
-            <div class="contato-item">
-                📱 <strong>WhatsApp:</strong><p><a href="https://wa.me/5516991649762" target="_blank">(16) 99164-9762</a></p>
+        <!-- Seção de Contato -->
+        <section id="contato">
+            <h2 class="titulo-contato">Fale Conosco</h2>
+            <div class="contato-container">
+                <div class="contato-item">
+                    <span>📱</span> <strong>WhatsApp:</strong><p><a href="https://wa.me/5516991649762" target="_blank">(16) 99164-9762</a></p>
+                </div>
+                <div class="contato-item">
+                    <span>☎️</span> <strong>Telefone:</strong><p>(16) 99164-9762</p>
+                </div>
+                <div class="contato-item">
+                    <span>📧</span> <strong>Email:</strong> <p><a href="mailto:mindhealth15611@gmail.com">mindhealth@gmail.com</a></p>
+                </div>
             </div>
-            <div class="contato-item">
-                ☎️ <strong>Telefone:</strong><p>(16) 99164-9762</p>
-            </div>
-            <div class="contato-item">
-                📧 <strong>Email:</strong> <p><a href="mailto:mindhealth15611@gmail.com">mindhealth@gmail.com</a></p>
-            </div>
-        </div>
         </section>
     </main>
 
