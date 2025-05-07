@@ -11,8 +11,6 @@ html {
   margin: 5vw auto;
   flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
   justify-content: center; /* Alinha os itens ao centro em telas pequenas */
-  flex: 1 1 300px;
-  box-sizing: border-box;
 }
 
 .pilar.par {
@@ -25,13 +23,13 @@ html {
 
 .img-img, .img3-img {
   width: 100%;
-  max-width: 100%;
-  height: auto;
+  max-width: 600px;
+  height: 350px;
   object-fit: cover;
   border-radius: 16px;
   border: 4px solid #ffffff;
-  box-sizing: border-box;
 }
+
 
 #subtitulo-pilares {
   margin-bottom: 16px;
