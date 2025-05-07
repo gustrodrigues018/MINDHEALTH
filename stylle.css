@@ -43,7 +43,7 @@ body {
 .nav {
   background-color: #003366; /* Azul escuro permanece */
   width: 100%;
-  height: 40px; /* Ajustado para estar bem no topo */
+  height: 70px; /* Ajustado para estar bem no topo */
   border: none;
   position: fixed;
   top: 0;
@@ -64,6 +64,8 @@ body {
   margin: 0 1em;
   font-size: 1rem;
   margin: 0vh 4vw;
+    line-height: -2.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
+
 }
 
 #titulo {
@@ -84,6 +86,8 @@ body {
   font-weight: 700;
   color: #ffffff; /* Azul escuro para o título */
   text-align: center;
+    line-height: -2.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
+
 }
 
 /* Media Queries para Responsividade */
