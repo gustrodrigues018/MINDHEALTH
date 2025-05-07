@@ -3,15 +3,26 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MindHealth - Início</title>
+  <title>MindHealth - Bem-vindo</title>
+
+  <!-- Fonte moderna do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+
   <style>
-    html, body {
+    * {
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
       height: 100%;
       background-color: #001F3F;
+      font-family: 'Outfit', sans-serif;
       overflow: hidden;
-      font-family: Arial, sans-serif;
     }
 
     #tsparticles {
@@ -26,51 +37,87 @@
       z-index: 1;
       height: 100%;
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+      animation: fadeIn 1.5s ease-in;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      font-weight: 700;
+      letter-spacing: 1px;
     }
 
     .enter-button {
-      padding: 20px 60px;
-      font-size: 2rem;
-      color: #001F3F;
-      background-color: white;
-      border: none;
+      padding: 18px 48px;
+      font-size: 1.4rem;
+      font-weight: bold;
+      background: transparent;
+      color: white;
+      border: 2px solid white;
       border-radius: 12px;
       cursor: pointer;
-      transition: transform 0.2s, box-shadow 0.2s;
+      position: relative;
+      transition: all 0.3s ease-in-out;
+    }
+
+    .enter-button::after {
+      content: "";
+      position: absolute;
+      top: -6px;
+      left: -6px;
+      right: -6px;
+      bottom: -6px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-radius: 16px;
+      animation: pulse 2s infinite;
     }
 
     .enter-button:hover {
+      background-color: white;
+      color: #001F3F;
       transform: scale(1.05);
-      box-shadow: 0 0 20px white;
+      box-shadow: 0 0 30px white;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(0.95); opacity: 0.5; }
+      50% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(0.95); opacity: 0.5; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
 
+  <!-- Partículas -->
   <div id="tsparticles"></div>
 
+  <!-- Conteúdo central -->
   <div class="container">
+    <h1>Bem-vindo ao MindHealth</h1>
     <button class="enter-button" onclick="window.location.href='home.html'">Entrar</button>
   </div>
 
-  <!-- Script do tsParticles -->
-  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
+  <!-- Configuração tsParticles -->
   <script>
     tsParticles.load("tsparticles", {
       background: {
-        color: {
-          value: "#001F3F"
-        }
+        color: { value: "#001F3F" }
       },
-      fpsLimit: 60,
+      fullScreen: { enable: true },
       interactivity: {
         events: {
-          onHover: {
-            enable: true,
-            mode: "attract"
-          },
+          onHover: { enable: true, mode: "attract" },
           resize: true
         },
         modes: {
@@ -84,45 +131,27 @@
         }
       },
       particles: {
-        color: {
-          value: "#ffffff"
-        },
+        color: { value: "#ffffff" },
         links: {
-          color: "#ffffff",
-          distance: 150,
           enable: true,
+          distance: 150,
+          color: "#ffffff",
           opacity: 0.4,
           width: 1
         },
-        collisions: {
-          enable: false
-        },
         move: {
-          direction: "none",
           enable: true,
-          outModes: {
-            default: "bounce"
-          },
-          random: false,
           speed: 2,
-          straight: false
+          direction: "none",
+          outModes: { default: "bounce" }
         },
         number: {
           value: 80,
-          density: {
-            enable: true,
-            area: 800
-          }
+          density: { enable: true, area: 800 }
         },
-        opacity: {
-          value: 0.5
-        },
-        shape: {
-          type: "circle"
-        },
-        size: {
-          value: { min: 1, max: 5 }
-        }
+        opacity: { value: 0.5 },
+        shape: { type: "circle" },
+        size: { value: { min: 1, max: 5 } }
       },
       detectRetina: true
     });
