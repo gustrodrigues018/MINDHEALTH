@@ -73,14 +73,14 @@ body {
   align-items: center;
   font-size: 10vw;
   font-family: "Helvetica Neue", sans-serif;
-  margin: 3vh 0;
+  margin: 1vh 0;
 }
 
 #sitetitulo {
   font-size: 3em;
   font-family: 'Playfair Display', serif;
   font-weight: 700;
-  color: #003366; /* Azul escuro para o título */
+  color: #ffffff; /* Azul escuro para o título */
   text-align: center;
 }
 
