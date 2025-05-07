@@ -43,40 +43,41 @@ body {
 .nav {
   background-color: #003366;
   width: 100%;
-  height: 70px;
+  height: 100px; /* altura aumentada */
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1;
 
   display: flex;
-  justify-content: center; /* Centraliza horizontalmente */
-  align-items: center;     /* Centraliza verticalmente */
+  justify-content: center;
+  align-items: center;
 
   box-sizing: border-box;
-  padding: 0;  /* sem padding vertical */
+  padding: 0 2vw;
+  gap: 10vw; /* espaçamento amplo entre título e menu */
+}
+
+#sitetitulo {
+  font-size: 3em; /* título maior */
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
 }
 
 .menu {
   display: flex;
-  gap: 2vw; /* espaçamento entre itens */
+  gap: 3vw; /* espaçamento entre itens do menu */
 }
 
 .menu a {
   text-decoration: none;
   color: #ffffff;
   font-family: "Garamond", sans-serif;
-  font-size: 1rem;
+  font-size: 1.5em; /* fonte maior para o menu */
 }
 
-#sitetitulo {
-  font-size: 1.8em;
-  font-family: 'Playfair Display', serif;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  margin-right: 2vw;
-}
 
 /* Media Queries para Responsividade */
 
