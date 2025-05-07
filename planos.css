@@ -14,7 +14,9 @@
         margin-bottom: 30px; /* reduzido para subir */
     }
 
-
+    #planos {
+    margin-top: 40px; /* Opcional: define distância do topo real */    
+    }
 
     .container-planos {
        margin-top: 10px; /* Adiciona leve margem caso precise */
