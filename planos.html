@@ -4,68 +4,172 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MindHealth</title>
-    <link rel="stylesheet" href="planos.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+            padding: 0;
+            background-color: #022548; /* Novo fundo da página */
+        }
+
+        #planos {
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .titulo-secao {
+            margin: 0;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .titulo-contato {
+            margin: 10vh 0 0 0;
+            font-size: 36px;
+            color: #ffffff;
+            margin-bottom: 40px;
+        }
+
+        .container-planos {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 70px; /* Espaçamento aumentado */
+        }
+
+        /* Cards */
+        .plano-card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 20px;
+            width: 280px;
+            height: 330px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            text-align: center;
+        }
+
+        .plano-card h3 {
+            font-size: 24px;
+            color: #003366;
+            margin-bottom: 10px;
+        }
+
+        .plano-card p {
+            margin: 6px 0;
+            font-size: 18px;
+        }
+
+        .plano-card ul {
+            list-style-type: circle;
+            padding-left: 0;
+            font-size: 17px;
+            text-align: left;
+            margin-top: 10px;
+        }
+
+        .plano-card li {
+            margin-bottom: 6px;
+            font-size: 17px;
+        }
+
+        /* Específicos */
+        .basic {
+            border-top: 6px solid #7cc6fe;
+        }
+
+        .premium {
+            border-top: 6px solid #0088cc;
+        }
+
+        /* Destaque no executivo */
+        .executivo {
+            border-top: 6px solid #ff9900;
+            background-color: #fff8ec;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transform: scale(1.07);
+        }
+
+        /* Botão de assinatura */
+        .btn-assinar {
+            background-color: #0088cc;
+            color: white;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-assinar:hover {
+            background-color: #0077b3;
+        }
+
+        /* Efeito de aumento ao passar o cursor */
+        .plano-card:hover {
+            transform: scale(1.1); /* Aumenta o card ao passar o cursor */
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Aumenta o efeito de sombra */
+        }
+
+    </style>
 </head>
 <body>
     <main>
+        <section id="planos">
+            <h2 class="titulo-secao">Nossos Planos</h2>
+            <div class="container-planos">
+                <div class="plano-card basic">
+                    <h3>Plano Basic</h3>
+                    <p><strong>Valor:</strong> R$ 59,90/mês</p>
+                    <p><strong>Público-alvo:</strong> Pessoas físicas</p>
+                    <p><strong>Benefícios:</strong></p>
+                    <ul>
+                        <li>Conteúdos educativos</li>
+                        <li>Meditação guiada</li>
+                        <li>Diário de humor</li>
+                        <li>Suporte emocional leve</li>
+                    </ul>
+                    <button class="btn-assinar">Assinar</button>
+                </div>
 
-      <section id="planos">
-        <h2 class="titulo-secao">Nossos Planos</h2>
-        <div class="container-planos">
-            <div class="plano-card basic">
-                <h3>Plano Basic</h3>
-                <p><strong>Valor:</strong> R$ 59,90/mês</p>
-                <p><strong>Público-alvo:</strong> Pessoas físicas</p>
-                <p><strong>Benefícios:</strong></p>
-                <ul>
-                    <li>Conteúdos educativos</li>
-                    <li>Meditação guiada</li>
-                    <li>Diário de humor</li>
-                    <li>Suporte emocional leve</li>
-                </ul>
-            </div>
+                <div class="plano-card executivo">
+                    <h3>Plano Executivo</h3>
+                    <p><strong>Valor:</strong> A partir de R$ 499,90/mês</p>
+                    <p><strong>Público-alvo:</strong> Empresas, escolas e hospitais</p>
+                    <p><strong>Benefícios:</strong></p>
+                    <ul>
+                        <li>Licenças para grupos</li>
+                        <li>Workshops e palestras</li>
+                        <li>Sessões em grupo</li>
+                        <li>Relatórios coletivos</li>
+                    </ul>
+                    <button class="btn-assinar">Assinar</button>
+                </div>
 
-            <div class="plano-card executivo">
-                <h3>Plano Executivo</h3>
-                <p><strong>Valor:</strong> A partir de R$ 499,90/mês</p>
-                <p><strong>Público-alvo:</strong> Empresas, escolas e hospitais</p>
-                <p><strong>Benefícios:</strong></p>
-                <ul>
-                    <li>Licenças para grupos</li>
-                    <li>Workshops e palestras</li>
-                    <li>Sessões em grupo</li>
-                    <li>Relatórios coletivos</li>
-                </ul>
+                <div class="plano-card premium">
+                    <h3>Plano Premium</h3>
+                    <p><strong>Valor:</strong> R$ 199,90/mês</p>
+                    <p><strong>Público-alvo:</strong> Pessoas físicas</p>
+                    <p><strong>Benefícios:</strong></p>
+                    <ul>
+                        <li>Todos os recursos do Basic</li>
+                        <li>Aeroterapia VR</li>
+                        <li>Relatórios personalizados</li>
+                        <li>IA e sensores</li>
+                        <li>🎁 Óculos VR incluso (trimestral)</li>
+                    </ul>
+                    <button class="btn-assinar">Assinar</button>
+                </div>
             </div>
-
-            <div class="plano-card premium">
-                <h3>Plano Premium</h3>
-                <p><strong>Valor:</strong> R$ 199,90/mês</p>
-                <p><strong>Público-alvo:</strong> Pessoas físicas</p>
-                <p><strong>Benefícios:</strong></p>
-                <ul>
-                    <li>Todos os recursos do Basic</li>
-                    <li>Aeroterapia VR</li>
-                    <li>Relatórios personalizados</li>
-                    <li>IA e sensores</li>
-                    <li>🎁 Óculos VR incluso (trimestral)</li>
-                </ul>
-            </div>
-        </div>
-
-        <h2 class="titulo-contato">Fale Conosco</h2>
-        <div class="contato-container">
-            <div class="contato-item">
-                📱 <strong>WhatsApp:</strong><p><a href="https://wa.me/5516991649762" target="_blank">(16) 99164-9762</a></p>
-            </div>
-            <div class="contato-item">
-                ☎️ <strong>Telefone:</strong><p>(16) 99164-9762</p>
-            </div>
-            <div class="contato-item">
-                📧 <strong>Email:</strong> <p><a href="mailto:mindhealth15611@gmail.com">mindhealth@gmail.com</a></p>
-            </div>
-        </div>
-      </section>
+        </section>
     </main>
 
     <script>
@@ -75,7 +179,7 @@
 
             planos.forEach(plano => {
                 plano.addEventListener('mouseenter', function() {
-                    plano.style.transform = 'scale(1.05)';
+                    plano.style.transform = 'scale(1.1)';
                     plano.style.transition = 'transform 0.3s ease, box-shadow 0.3s ease';
                     plano.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.2)';
                 });
@@ -89,3 +193,4 @@
     </script>
 </body>
 </html>
+
