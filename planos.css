@@ -35,23 +35,25 @@
 }
 
 .contato-container {
-    margin-top: 20px; /* menos espaço após o título */
-    gap: 15px; /* opcional se usar display:grid */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* espaço entre os cards */
+    margin-top: 20px;
 }
 
 .contato-item {
     background-color: #ffffff;
-    padding: 12px 18px; /* menor padding */
-    margin: 8px 0;
-    width: 85%;
-    max-width: 400px; /* menor largura máxima */
+    padding: 12px 16px;
+    width: 280px; /* menor largura */
+    height: auto;
     border-radius: 8px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 16px; /* reduzido */
+    flex-direction: column; /* vertical para melhor ajuste em cards menores */
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 15px;
     color: #003366;
 }
 
