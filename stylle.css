@@ -43,7 +43,7 @@ body {
 .nav {
   background-color: #003366; /* Azul escuro permanece */
   width: 100%;
-  height: 60px; /* Ajustado para estar bem no topo */
+  height: 40px; /* Ajustado para estar bem no topo */
   border: none;
   position: fixed;
   top: 0;
@@ -53,7 +53,7 @@ body {
   padding: 1em 0;
   box-sizing: border-box;
   margin: 0;
-  line-height: 1.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
+  line-height: -2.6; /* valor pode ser número (multiplicador) ou px, em, etc. */
 
 }
 
