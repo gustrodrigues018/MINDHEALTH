@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MindHealth - Início</title>
   <style>
-    body, html {
+    html, body {
       margin: 0;
       padding: 0;
       height: 100%;
@@ -14,7 +14,7 @@
       font-family: Arial, sans-serif;
     }
 
-    #particles-js {
+    #tsparticles {
       position: absolute;
       width: 100%;
       height: 100%;
@@ -48,47 +48,28 @@
   </style>
 </head>
 <body>
-  <div id="particles-js"></div>
+
+  <div id="tsparticles"></div>
 
   <div class="container">
     <button class="enter-button" onclick="window.location.href='home.html'">Entrar</button>
   </div>
 
-  <!-- Script do particles.js -->
-  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+  <!-- Script do tsParticles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.11.1/tsparticles.bundle.min.js"></script>
   <script>
-    particlesJS("particles-js", {
-      particles: {
-        number: { value: 80, density: { enable: true, value_area: 800 } },
-        color: { value: "#ffffff" },
-        shape: { type: "circle" },
-        opacity: { value: 0.5, random: false },
-        size: { value: 3, random: true },
-        line_linked: {
-          enable: true,
-          distance: 150,
-          color: "#ffffff",
-          opacity: 0.4,
-          width: 1
-        },
-        move: {
-          enable: true,
-          speed: 4,
-          attract: {
-            enable: false
-          }
+    tsParticles.load("tsparticles", {
+      background: {
+        color: {
+          value: "#001F3F"
         }
       },
+      fpsLimit: 60,
       interactivity: {
-        detect_on: "canvas",
         events: {
-          onhover: {
+          onHover: {
             enable: true,
             mode: "attract"
-          },
-          onclick: {
-            enable: true,
-            mode: "push"
           },
           resize: true
         },
@@ -96,14 +77,54 @@
           attract: {
             distance: 200,
             duration: 0.4,
-            factor: 5
-          },
-          push: {
-            particles_nb: 4
+            factor: 5,
+            maxSpeed: 50,
+            speed: 1
           }
         }
       },
-      retina_detect: true
+      particles: {
+        color: {
+          value: "#ffffff"
+        },
+        links: {
+          color: "#ffffff",
+          distance: 150,
+          enable: true,
+          opacity: 0.4,
+          width: 1
+        },
+        collisions: {
+          enable: false
+        },
+        move: {
+          direction: "none",
+          enable: true,
+          outModes: {
+            default: "bounce"
+          },
+          random: false,
+          speed: 2,
+          straight: false
+        },
+        number: {
+          value: 80,
+          density: {
+            enable: true,
+            area: 800
+          }
+        },
+        opacity: {
+          value: 0.5
+        },
+        shape: {
+          type: "circle"
+        },
+        size: {
+          value: { min: 1, max: 5 }
+        }
+      },
+      detectRetina: true
     });
   </script>
 </body>
