@@ -137,16 +137,16 @@ body {
     border-radius: 12px;
     padding: 20px;
     width: 280px;
-    height: 330px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease;
+    min-height: 330px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     opacity: 0;
-    transform: translateY(30px);
     animation: fadeUp 0.7s forwards;
+    will-change: transform;
 }
+
 
 .plano-card:nth-child(1) { animation-delay: 0.2s; }
 .plano-card:nth-child(2) { animation-delay: 0.4s; }
@@ -237,11 +237,11 @@ body {
 
 /* Hover no plano */
 .plano-card:hover {
-    transform: scale(1.20);
+    transform: scale(1.05);
     box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
 }
+
 
 /* Contato */
 #contato {
