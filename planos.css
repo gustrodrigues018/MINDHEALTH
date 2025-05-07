@@ -29,34 +29,32 @@
     }
 
     .titulo-contato {
-        margin-top: 80px;
-        font-size: 36px;
-        color: #ffffff;
-    }
+    margin-top: 60px; /* um pouco mais próximo do conteúdo anterior */
+    font-size: 28px; /* menor que 36px */
+    color: #ffffff;
+}
 
-    /* Estilos do Container de Contato */
-    .contato-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 40px;
-    }
+.contato-container {
+    margin-top: 20px; /* menos espaço após o título */
+    gap: 15px; /* opcional se usar display:grid */
+}
 
-    .contato-item {
-        background-color: #ffffff;
-        padding: 20px;
-        margin: 10px 0;
-        width: 90%;
-        max-width: 500px;
-        border-radius: 10px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-        font-size: 18px;
-        color: #003366;
-    }
+.contato-item {
+    background-color: #ffffff;
+    padding: 12px 18px; /* menor padding */
+    margin: 8px 0;
+    width: 85%;
+    max-width: 400px; /* menor largura máxima */
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 16px; /* reduzido */
+    color: #003366;
+}
+
 
     .contato-item a {
         color: #006bb3;
