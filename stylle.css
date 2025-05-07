@@ -355,6 +355,15 @@ body {
  text-align:center;
 }
 
+.titulo-valores {
+  font-size: 2rem;
+  color: #003366;
+  margin-bottom: 1rem;
+  border-left: 5px solid #00b3b3;
+  padding-left: 10px;
+ text-align:center;
+}
+
 .titulo-Depoimentos {
   font-size: 2rem;
   color: #003366;
