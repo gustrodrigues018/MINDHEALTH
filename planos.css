@@ -14,7 +14,8 @@
         margin-bottom: 30px; /* reduzido para subir */
     }
 
-    #planos {
+      #planos {
+padding: 5px 20px 60px; /* Menor padding-top */
     margin-top: 40px; /* Opcional: define distância do topo real */    
     }
 
