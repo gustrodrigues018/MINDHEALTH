@@ -91,80 +91,139 @@
   </div>
 
   <script>
-    const questions = [
-      { q: "Você costuma tomar decisões com base na lógica ou na emoção?", a: ["Lógica", "Emoção", "Depende"] },
-      { q: "Você prefere planejar tudo ou agir por impulso?", a: ["Planejar", "Impulso", "Depende"] },
-      { q: "Quando está em grupo, você costuma falar mais ou ouvir mais?", a: ["Ouvir", "Falar", "Fico neutro"] },
-      { q: "Diante de um problema, o que você faz primeiro?", a: ["Analisar", "Sentir", "Adiar"] },
-      { q: "Você se considera mais racional ou sensível?", a: ["Racional", "Sensível", "Os dois"] },
-      { q: "Conflitos te fazem querer:", a: ["Resolver logo", "Evitar", "Refletir sozinho"] },
-      { q: "Quando precisa decidir rápido, você:", a: ["Pensa no que é mais lógico", "Age pelo instinto", "Procura alguém para opinar"] },
-      { q: "Você se sente confortável com emoções fortes?", a: ["Nem um pouco", "Sim", "Depende do contexto"] },
-      { q: "O que é mais importante para você?", a: ["Coerência", "Empatia", "Liberdade"] },
-      { q: "Você tende a seguir mais a cabeça ou o coração?", a: ["Cabeça", "Coração", "Ambos"] }
-    ];
+  import { useState } from "react";
 
-    const scores = { racional: 0, emocional: 0, evasivo: 0 };
-    let currentQuestion = 0;
+const perguntas = [
+  {
+    texto: "Você costuma tomar decisões com base na lógica ou na emoção?",
+    opcoes: [
+      { texto: "Lógica", tipo: "racional" },
+      { texto: "Emoção", tipo: "emocional" },
+      { texto: "Depende do momento", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Diante de um problema, você...",
+    opcoes: [
+      { texto: "Analisa calmamente", tipo: "racional" },
+      { texto: "Segue o coração", tipo: "emocional" },
+      { texto: "Evita pensar nisso", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Ao ouvir uma crítica, você tende a...",
+    opcoes: [
+      { texto: "Refletir sobre ela", tipo: "racional" },
+      { texto: "Reagir emocionalmente", tipo: "emocional" },
+      { texto: "Ignorar", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Quando precisa decidir rapidamente, você...",
+    opcoes: [
+      { texto: "Pensa logicamente", tipo: "racional" },
+      { texto: "Vai pelo sentimento", tipo: "emocional" },
+      { texto: "Espera mais tempo", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Você prefere planejar ou improvisar?",
+    opcoes: [
+      { texto: "Planejar", tipo: "racional" },
+      { texto: "Improvisar", tipo: "emocional" },
+      { texto: "Depende da situação", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Em discussões, você tende a...",
+    opcoes: [
+      { texto: "Argumentar com lógica", tipo: "racional" },
+      { texto: "Falar com emoção", tipo: "emocional" },
+      { texto: "Evitar o conflito", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Você se considera mais...",
+    opcoes: [
+      { texto: "Objetivo(a)", tipo: "racional" },
+      { texto: "Sensível", tipo: "emocional" },
+      { texto: "Indefinido(a)", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Ao receber uma notícia ruim, você...",
+    opcoes: [
+      { texto: "Procura entender a situação", tipo: "racional" },
+      { texto: "Reage com intensidade emocional", tipo: "emocional" },
+      { texto: "Evita pensar no assunto", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Você lida com pressão de forma...",
+    opcoes: [
+      { texto: "Organizada", tipo: "racional" },
+      { texto: "Ansiosa", tipo: "emocional" },
+      { texto: "Fugindo da situação", tipo: "evasivo" },
+    ],
+  },
+  {
+    texto: "Na maioria das situações, você age com...",
+    opcoes: [
+      { texto: "Racionalidade", tipo: "racional" },
+      { texto: "Coração", tipo: "emocional" },
+      { texto: "Instinto de autopreservação", tipo: "evasivo" },
+    ],
+  },
+];
 
-    const quiz = document.getElementById("quiz");
-    const questionEl = document.getElementById("question");
-    const optionsEl = document.getElementById("options");
-    const resultEl = document.getElementById("result");
-    const progressEl = document.getElementById("progress");
+const Quiz = () => {
+  const [perguntaAtual, setPerguntaAtual] = useState(0);
+  const [respostas, setRespostas] = useState({ racional: 0, emocional: 0, evasivo: 0 });
+  const [resultado, setResultado] = useState("");
 
-    function updateProgress() {
-      const percent = ((currentQuestion) / questions.length) * 100;
-      progressEl.style.width = `${percent}%`;
+  const responder = (tipo) => {
+    const novasRespostas = { ...respostas, [tipo]: respostas[tipo] + 1 };
+    setRespostas(novasRespostas);
+
+    const proxima = perguntaAtual + 1;
+    if (proxima < perguntas.length) {
+      setPerguntaAtual(proxima);
+    } else {
+      const maior = Object.entries(novasRespostas).reduce((a, b) => (a[1] > b[1] ? a : b))[0];
+      let textoResultado = "";
+      if (maior === "racional") textoResultado = "Você tem um perfil racional: valoriza a lógica e análise.";
+      else if (maior === "emocional") textoResultado = "Você tem um perfil emocional: age guiado pelas emoções e empatia.";
+      else textoResultado = "Você tem um perfil evasivo: prefere evitar confrontos e decisões diretas.";
+      setResultado(textoResultado);
     }
+  };
 
-    function showQuestion() {
-      const q = questions[currentQuestion];
-      questionEl.textContent = q.q;
-      optionsEl.innerHTML = "";
-      q.a.forEach((opt, index) => {
-        const btn = document.createElement("button");
-        btn.textContent = opt;
-        btn.onclick = () => handleAnswer(index);
-        optionsEl.appendChild(btn);
-      });
-      updateProgress();
-    }
+  const progresso = ((perguntaAtual) / perguntas.length) * 100;
 
-    function handleAnswer(index) {
-      // Classificação baseada nas opções (ajustável conforme interpretação)
-      if (index === 0) scores.racional++;
-      else if (index === 1) scores.emocional++;
-      else scores.evasivo++;
+  return (
+    <div style={{ backgroundColor: '#022548', color: '#fff', minHeight: '100vh', padding: '40px', fontFamily: 'Arial, sans-serif' }}>
+      <div style={{ background: '#fff', color: '#003366', borderRadius: '12px', maxWidth: '600px', margin: 'auto', padding: '30px', transition: 'opacity 0.5s ease' }}>
+        <div style={{ height: '10px', background: '#ccc', borderRadius: '10px', overflow: 'hidden', marginBottom: '20px' }}>
+          <div style={{ width: `${progresso}%`, background: '#006bb3', height: '100%', transition: 'width 0.4s ease' }}></div>
+        </div>
+        {!resultado ? (
+          <>
+            <h2 style={{ fontSize: '24px' }}>{perguntas[perguntaAtual].texto}</h2>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginTop: '20px' }}>
+              {perguntas[perguntaAtual].opcoes.map((opcao, idx) => (
+                <button key={idx} onClick={() => responder(opcao.tipo)} style={{ padding: '12px', fontSize: '16px', borderRadius: '8px', border: 'none', cursor: 'pointer', backgroundColor: '#e3effd', color: '#003366' }}>{opcao.texto}</button>
+              ))}
+            </div>
+          </>
+        ) : (
+          <div style={{ fontSize: '20px', textAlign: 'center' }}>{resultado}</div>
+        )}
+      </div>
+    </div>
+  );
+};
 
-      quiz.classList.remove("fade-in");
-      quiz.classList.add("fade-out");
-
-      setTimeout(() => {
-        currentQuestion++;
-        if (currentQuestion < questions.length) {
-          showQuestion();
-          quiz.classList.remove("fade-out");
-          quiz.classList.add("fade-in");
-        } else {
-          showResult();
-        }
-      }, 400);
-    }
-
-    function showResult() {
-      questionEl.style.display = "none";
-      optionsEl.style.display = "none";
-      progressEl.style.width = "100%";
-      let perfil;
-      const max = Math.max(scores.racional, scores.emocional, scores.evasivo);
-      if (max === scores.racional) perfil = "Perfil Racional: você prioriza lógica, clareza e análise.";
-      else if (max === scores.emocional) perfil = "Perfil Emocional: você valoriza sentimentos e empatia.";
-      else perfil = "Perfil Evasivo: você tende a evitar decisões diretas, prezando por liberdade ou tempo.";
-
-      resultEl.textContent = perfil;
-    }
-
+export default Quiz;
     // Iniciar
     showQuestion();
   </script>
