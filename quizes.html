@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz Psicológico</title>
+  <style>
+    body {
+      background-color: #022548;
+      font-family: 'Arial', sans-serif;
+      color: #ffffff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .quiz-container {
+      background-color: #033865;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      max-width: 600px;
+      width: 90%;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .question {
+      margin-bottom: 25px;
+    }
+
+    .options button {
+      background-color: #006bb3;
+      color: #fff;
+      border: none;
+      padding: 12px 20px;
+      margin: 10px 5px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .options button:hover {
+      background-color: #005499;
+    }
+
+    #result {
+      margin-top: 30px;
+      font-size: 20px;
+      background-color: #fff;
+      color: #003366;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    #restart {
+      margin-top: 20px;
+      background-color: #7cc6fe;
+      color: #003366;
+    }
+  </style>
+</head>
+<body>
+  <div class="quiz-container">
+    <h2>Como você lida com suas emoções?</h2>
+    <div id="quiz"></div>
+    <div id="result"></div>
+    <button id="restart" style="display:none;">Recomeçar</button>
+  </div>
+
+  <script>
+    const questions = [
+      { q: "Você costuma expressar suas emoções com facilidade?", a: ["Sempre", "Às vezes", "Raramente"] },
+      { q: "Como você reage em situações de estresse?", a: ["Fico calmo", "Fico ansioso", "Evito pensar nisso"] },
+      { q: "Costuma conversar com alguém sobre seus sentimentos?", a: ["Sim, sempre", "De vez em quando", "Quase nunca"] },
+      { q: "Você se considera uma pessoa racional?", a: ["Muito", "Moderadamente", "Pouco"] },
+      { q: "Você evita conflitos mesmo estando certo?", a: ["Sim", "Depende", "Não"] },
+      { q: "Em uma situação difícil, você...", a: ["Enfrenta com lógica", "Reage emocionalmente", "Se isola"] },
+      { q: "Você sente que tem autocontrole?", a: ["Sim", "Mais ou menos", "Não muito"] },
+      { q: "Costuma guardar o que sente?", a: ["Sim, sempre", "Depende", "Não"] },
+      { q: "Você lida bem com críticas?", a: ["Sim", "Às vezes", "Não"] },
+      { q: "O que mais te define?", a: ["Lógico", "Sensível", "Reservado"] }
+    ];
+
+    const perfil = { racional: 0, emocional: 0, evasivo: 0 };
+    let current = 0;
+
+    function renderQuestion() {
+      if (current >= questions.length) return showResult();
+      const q = questions[current];
+      const quizDiv = document.getElementById("quiz");
+      quizDiv.innerHTML = `
+        <div class="question">
+          <h3>${q.q}</h3>
+          <div class="options">
+            <button onclick="select(0)">${q.a[0]}</button>
+            <button onclick="select(1)">${q.a[1]}</button>
+            <button onclick="select(2)">${q.a[2]}</button>
+          </div>
+        </div>
+      `;
+    }
+
+    function select(index) {
+      if (index === 0) perfil.racional++;
+      else if (index === 1) perfil.emocional++;
+      else perfil.evasivo++;
+      current++;
+      renderQuestion();
+    }
+
+    function showResult() {
+      let result = "";
+      if (perfil.racional >= perfil.emocional && perfil.racional >= perfil.evasivo) {
+        result = "Você é uma pessoa racional. Costuma analisar com lógica e tomar decisões ponderadas.";
+      } else if (perfil.emocional >= perfil.racional && perfil.emocional >= perfil.evasivo) {
+        result = "Você é emocional. Sua empatia e sensibilidade se destacam, embora possa se sobrecarregar.";
+      } else {
+        result = "Você tende a evitar confrontos e se resguardar. Cuidar das emoções é essencial!";
+      }
+
+      document.getElementById("quiz").innerHTML = "";
+      document.getElementById("result").innerText = result;
+      document.getElementById("restart").style.display = "inline-block";
+    }
+
+    document.getElementById("restart").onclick = () => {
+      current = 0;
+      perfil.racional = perfil.emocional = perfil.evasivo = 0;
+      document.getElementById("result").innerText = "";
+      document.getElementById("restart").style.display = "none";
+      renderQuestion();
+    };
+
+    renderQuestion();
+  </script>
+</body>
+</html>
