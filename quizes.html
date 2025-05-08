@@ -2,144 +2,171 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Quiz Psicológico</title>
   <style>
     body {
-      background-color: #022548;
-      font-family: 'Arial', sans-serif;
-      color: #ffffff;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f7f9fc;
+      color: #2c3e50;
       margin: 0;
       padding: 0;
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
+      height: 100vh;
+      overflow: hidden;
     }
 
     .quiz-container {
-      background-color: #033865;
-      padding: 30px;
-      border-radius: 20px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-      max-width: 600px;
+      background-color: white;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
       width: 90%;
+      max-width: 600px;
+      padding: 30px;
       text-align: center;
-    }
-
-    h2 {
-      font-size: 24px;
-      margin-bottom: 20px;
+      transition: opacity 0.4s ease;
     }
 
     .question {
-      margin-bottom: 25px;
+      font-size: 1.3rem;
+      margin-bottom: 30px;
     }
 
     .options button {
-      background-color: #006bb3;
-      color: #fff;
+      background-color: #e3effd;
       border: none;
+      border-radius: 8px;
       padding: 12px 20px;
-      margin: 10px 5px;
-      border-radius: 10px;
+      margin: 8px;
+      font-size: 1rem;
       cursor: pointer;
       transition: background-color 0.3s ease;
     }
 
     .options button:hover {
-      background-color: #005499;
+      background-color: #d0e5fb;
     }
 
-    #result {
-      margin-top: 30px;
-      font-size: 20px;
-      background-color: #fff;
-      color: #003366;
-      padding: 20px;
-      border-radius: 10px;
+    .progress-bar {
+      height: 10px;
+      background-color: #d3d3d3;
+      border-radius: 20px;
+      overflow: hidden;
+      margin-bottom: 25px;
     }
 
-    #restart {
+    .progress {
+      height: 100%;
+      width: 0%;
+      background-color: #3498db;
+      transition: width 0.4s ease;
+    }
+
+    .fade-out {
+      opacity: 0;
+    }
+
+    .fade-in {
+      opacity: 1;
+    }
+
+    .result {
+      font-size: 1.2rem;
       margin-top: 20px;
-      background-color: #7cc6fe;
-      color: #003366;
+      font-weight: bold;
+      color: #34495e;
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <h2>Como você lida com suas emoções?</h2>
-    <div id="quiz"></div>
-    <div id="result"></div>
-    <button id="restart" style="display:none;">Recomeçar</button>
+  <div class="quiz-container fade-in" id="quiz">
+    <div class="progress-bar">
+      <div class="progress" id="progress"></div>
+    </div>
+    <div class="question" id="question">Carregando...</div>
+    <div class="options" id="options"></div>
+    <div class="result" id="result"></div>
   </div>
 
   <script>
     const questions = [
-      { q: "Você costuma expressar suas emoções com facilidade?", a: ["Sempre", "Às vezes", "Raramente"] },
-      { q: "Como você reage em situações de estresse?", a: ["Fico calmo", "Fico ansioso", "Evito pensar nisso"] },
-      { q: "Costuma conversar com alguém sobre seus sentimentos?", a: ["Sim, sempre", "De vez em quando", "Quase nunca"] },
-      { q: "Você se considera uma pessoa racional?", a: ["Muito", "Moderadamente", "Pouco"] },
-      { q: "Você evita conflitos mesmo estando certo?", a: ["Sim", "Depende", "Não"] },
-      { q: "Em uma situação difícil, você...", a: ["Enfrenta com lógica", "Reage emocionalmente", "Se isola"] },
-      { q: "Você sente que tem autocontrole?", a: ["Sim", "Mais ou menos", "Não muito"] },
-      { q: "Costuma guardar o que sente?", a: ["Sim, sempre", "Depende", "Não"] },
-      { q: "Você lida bem com críticas?", a: ["Sim", "Às vezes", "Não"] },
-      { q: "O que mais te define?", a: ["Lógico", "Sensível", "Reservado"] }
+      { q: "Você costuma tomar decisões com base na lógica ou na emoção?", a: ["Lógica", "Emoção", "Depende"] },
+      { q: "Você prefere planejar tudo ou agir por impulso?", a: ["Planejar", "Impulso", "Depende"] },
+      { q: "Quando está em grupo, você costuma falar mais ou ouvir mais?", a: ["Ouvir", "Falar", "Fico neutro"] },
+      { q: "Diante de um problema, o que você faz primeiro?", a: ["Analisar", "Sentir", "Adiar"] },
+      { q: "Você se considera mais racional ou sensível?", a: ["Racional", "Sensível", "Os dois"] },
+      { q: "Conflitos te fazem querer:", a: ["Resolver logo", "Evitar", "Refletir sozinho"] },
+      { q: "Quando precisa decidir rápido, você:", a: ["Pensa no que é mais lógico", "Age pelo instinto", "Procura alguém para opinar"] },
+      { q: "Você se sente confortável com emoções fortes?", a: ["Nem um pouco", "Sim", "Depende do contexto"] },
+      { q: "O que é mais importante para você?", a: ["Coerência", "Empatia", "Liberdade"] },
+      { q: "Você tende a seguir mais a cabeça ou o coração?", a: ["Cabeça", "Coração", "Ambos"] }
     ];
 
-    const perfil = { racional: 0, emocional: 0, evasivo: 0 };
-    let current = 0;
+    const scores = { racional: 0, emocional: 0, evasivo: 0 };
+    let currentQuestion = 0;
 
-    function renderQuestion() {
-      if (current >= questions.length) return showResult();
-      const q = questions[current];
-      const quizDiv = document.getElementById("quiz");
-      quizDiv.innerHTML = `
-        <div class="question">
-          <h3>${q.q}</h3>
-          <div class="options">
-            <button onclick="select(0)">${q.a[0]}</button>
-            <button onclick="select(1)">${q.a[1]}</button>
-            <button onclick="select(2)">${q.a[2]}</button>
-          </div>
-        </div>
-      `;
+    const quiz = document.getElementById("quiz");
+    const questionEl = document.getElementById("question");
+    const optionsEl = document.getElementById("options");
+    const resultEl = document.getElementById("result");
+    const progressEl = document.getElementById("progress");
+
+    function updateProgress() {
+      const percent = ((currentQuestion) / questions.length) * 100;
+      progressEl.style.width = `${percent}%`;
     }
 
-    function select(index) {
-      if (index === 0) perfil.racional++;
-      else if (index === 1) perfil.emocional++;
-      else perfil.evasivo++;
-      current++;
-      renderQuestion();
+    function showQuestion() {
+      const q = questions[currentQuestion];
+      questionEl.textContent = q.q;
+      optionsEl.innerHTML = "";
+      q.a.forEach((opt, index) => {
+        const btn = document.createElement("button");
+        btn.textContent = opt;
+        btn.onclick = () => handleAnswer(index);
+        optionsEl.appendChild(btn);
+      });
+      updateProgress();
+    }
+
+    function handleAnswer(index) {
+      // Classificação baseada nas opções (ajustável conforme interpretação)
+      if (index === 0) scores.racional++;
+      else if (index === 1) scores.emocional++;
+      else scores.evasivo++;
+
+      quiz.classList.remove("fade-in");
+      quiz.classList.add("fade-out");
+
+      setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+          showQuestion();
+          quiz.classList.remove("fade-out");
+          quiz.classList.add("fade-in");
+        } else {
+          showResult();
+        }
+      }, 400);
     }
 
     function showResult() {
-      let result = "";
-      if (perfil.racional >= perfil.emocional && perfil.racional >= perfil.evasivo) {
-        result = "Você é uma pessoa racional. Costuma analisar com lógica e tomar decisões ponderadas.";
-      } else if (perfil.emocional >= perfil.racional && perfil.emocional >= perfil.evasivo) {
-        result = "Você é emocional. Sua empatia e sensibilidade se destacam, embora possa se sobrecarregar.";
-      } else {
-        result = "Você tende a evitar confrontos e se resguardar. Cuidar das emoções é essencial!";
-      }
+      questionEl.style.display = "none";
+      optionsEl.style.display = "none";
+      progressEl.style.width = "100%";
+      let perfil;
+      const max = Math.max(scores.racional, scores.emocional, scores.evasivo);
+      if (max === scores.racional) perfil = "Perfil Racional: você prioriza lógica, clareza e análise.";
+      else if (max === scores.emocional) perfil = "Perfil Emocional: você valoriza sentimentos e empatia.";
+      else perfil = "Perfil Evasivo: você tende a evitar decisões diretas, prezando por liberdade ou tempo.";
 
-      document.getElementById("quiz").innerHTML = "";
-      document.getElementById("result").innerText = result;
-      document.getElementById("restart").style.display = "inline-block";
+      resultEl.textContent = perfil;
     }
 
-    document.getElementById("restart").onclick = () => {
-      current = 0;
-      perfil.racional = perfil.emocional = perfil.evasivo = 0;
-      document.getElementById("result").innerText = "";
-      document.getElementById("restart").style.display = "none";
-      renderQuestion();
-    };
-
-    renderQuestion();
+    // Iniciar
+    showQuestion();
   </script>
 </body>
 </html>
