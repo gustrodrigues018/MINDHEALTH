@@ -1,244 +1,112 @@
-html {
-  scroll-behavior: smooth;
-  overflow-x: hidden;
-}
+@media (max-width: 480px) {
+  .nav {
+    flex-direction: column;
+    height: auto;
+    padding: 10px;
+  }
 
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #ffffff;
-  color: #003366;
-}
+  .nav-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
 
-/* ------------------ NAVBAR ------------------ */
-.nav {
-  background-color: #003366;
-  width: 100%;
-  height: 70px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  box-sizing: border-box;
-  padding: 0 2vw;
-}
+  #sitetitulo {
+    font-size: 1.5em;
+    text-align: center;
+  }
 
-.nav-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 1200px;
-  gap: 10vw;
-}
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    width: 100%;
+  }
 
-#sitetitulo {
-  font-size: 2.5em;
-  font-family: 'Courier New', monospace;
-  font-weight: 700;
-  color: #ffffff;
-  text-align: center;
-  white-space: nowrap;
-  line-height: 2;
-}
+  .menu a {
+    font-size: 1rem;
+    padding: 8px 12px;
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
 
-.menu {
-  display: flex;
-  gap: 2vw;
-}
+  .pilar {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px;
+  }
 
-.menu a {
-  text-decoration: none;
-  color: #ffffff;
-  font-family: "Segoe UI", "Verdana", sans-serif;
-  font-size: 1.1em;
-  padding: 0.6em 0.9em;
-  line-height: 2;
-}
+  .img-img, .img3-img {
+    max-width: 100%;
+    height: auto;
+  }
 
-/* ------------------ PILARES ------------------ */
-.pilar {
-  display: flex;
-  align-items: flex-start;
-  gap: 5vw;
-  margin: 5vw auto;
-  flex-wrap: wrap;
-  justify-content: center;
-}
+  #texto-pilares, #texto-pilares1 {
+    font-size: 16px;
+    margin: 10px auto;
+    text-align: justify;
+  }
 
-.pilar.par {
-  flex-direction: row-reverse;
-}
+  #titulo-pilares {
+    font-size: 1.8em;
+  }
 
-.img {
-  flex-shrink: 0;
-}
+  #subtitulo-pilares {
+    font-size: 1.2em;
+  }
 
-.img-img, .img3-img {
-  width: 100%;
-  max-width: 500px;
-  height: 350px;
-  object-fit: cover;
-  border-radius: 16px;
-  border: 4px solid #ffffff;
-}
+  #titulo-missao,
+  #titulo-visao {
+    font-size: 1.8em;
+  }
 
-#pilares {
-  margin-bottom: 4vh;
-  background-color: #003366;
-  width: 95.1vw;
-  border-radius: 8px;
-  padding: 2vw;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
+  #texto-missao,
+  #texto-visao {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 
-#titulo-pilares {
-  color: #ffffff;
-  text-align: center;
-  font-size: 40px;
-  margin: 1vh 0vw 9vh 0vw;
-}
+  .valor {
+    width: 140px;
+    height: 140px;
+    font-size: 0.9rem;
+    margin: 15px;
+  }
 
-#subtitulo-pilares {
-  color: #009999;
-  font-size: 2.5vw;
-  margin-bottom: 2vh;
-  text-align: center;
-}
+  .container img {
+    width: 100%;
+  }
 
-#texto-pilares, #texto-pilares1 {
-  color: #ffffff;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  margin: 1vw 6vh;
-  max-width: 600px;
-}
+  .titulo-section,
+  .titulo-valores,
+  .titulo-Depoimentos {
+    font-size: 1.4rem;
+  }
 
-/* ------------------ MISSÃO ------------------ */
-#missao {
-  background-color: #009999;
-  padding: 3vw;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.3s ease-in-out;
-}
+  .subtitulo-section,
+  .subtitulo-caso {
+    font-size: 1.1rem;
+  }
 
-#titulo-missao {
-  font-size: 42px;
-  color: #ffffff;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 2vh;
-}
+  .texto-section,
+  .texto-sobre,
+  .depoimento,
+  ul {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
 
-#texto-missao {
-  color: #ffffff;
-  font-family: 'Georgia', serif;
-  font-size: 22px;
-  line-height: 1.6;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
+  .bloco-sobre,
+  .bloco-diferenciais,
+  .bloco-depoimentos {
+    padding: 15px;
+  }
 
-/* ------------------ VISÃO ------------------ */
-#visao {
-  background: linear-gradient(135deg, #003366, #005b99);
-  padding: 3vw;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-}
-
-#titulo-visao {
-  font-size: 42px;
-  color: #ffffff;
-  text-align: center;
-  font-weight: 700;
-  letter-spacing: 1px;
-  margin-bottom: 1.5vh;
-}
-
-#subtitulo-visao {
-  color: #cfe9f5;
-  font-size: 20px;
-  text-align: center;
-  margin-bottom: 1.5vh;
-  font-style: italic;
-}
-
-#texto-visao {
-  color: #ffffff;
-  font-family: 'Georgia', serif;
-  font-size: 22px;
-  line-height: 1.6;
-  text-align: center;
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-/* ------------------ VALORES ------------------ */
-.valores-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin-bottom: 40px;
-  max-width: 95%;
-  padding: 0 2vw;
-}
-
-.valor {
-  width: 210px;
-  height: 210px;
-  border-radius: 50%;
-  background-color: #003366;
-  border: 2px solid #007acc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: bold;
-  font-size: 16px;
-  color: #ffffff;
-  margin: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease;
-}
-
-.valor.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.valor:nth-child(even) {
-  background-color: #009999;
-}
-
-.valores-container .valor:not(:hover) {
-  filter: blur(4px);
-}
-
-.valor:hover {
-  background-color: #007acc;
-  filter: blur(0);
-}
-
-/* ------------------ CONTEÚDO GERAL ------------------ */
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.container img {
-  max-width: 100%;
-  width: 98vw;
-  height: auto;
-  margin: 0;
-  border-radius: 8px;
+  .valores-container {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .titulo-section, .titulo-valores, .titulo-Depoimentos {
