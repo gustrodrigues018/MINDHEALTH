@@ -77,7 +77,7 @@ font-family: 'Courier New', monospace;
   color: #ffffff;
   text-align: center;
   white-space: nowrap;
-  line-height: 1; /* ou em px, ex: 24px */
+  line-height: 2; /* ou em px, ex: 24px */
 
 }
 
