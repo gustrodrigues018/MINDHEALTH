@@ -1,77 +1,72 @@
 @media (max-width: 480px) {
-   .nav {
-  height: 60px !important;
-  background-color: #003366 !important;
-}
+  .nav {
+    height: 60px !important;
+    background-color: #003366 !important;
+  }
 
-#sitetitulo {
-  font-size: 1.6em !important;
-  color: #ffffff !important;
-}
+  #sitetitulo {
+    font-size: 1.6em !important;
+    color: #ffffff !important;
+  }
 
-.menu a {
-  font-size: 0.75rem !important;
-  color: #ffffff !important;
-  text-decoration: none;
-  font-family: "Segoe UI", "Verdana", sans-serif;
-  padding: 0.6em 0.9em;
-}
+  .menu a {
+    font-size: 0.75rem !important;
+    color: #ffffff !important;
+    text-decoration: none;
+    font-family: "Segoe UI", "Verdana", sans-serif;
+    padding: 0.6em 0.9em;
+  }
 
-/* Círculos de valores menores */
-.valor {
-  width: 160px !important;
-  height: 160px !important;
-  font-size: 14px !important;
-  background-color: #003366 !important;
-  border: 2px solid #007acc !important;
-  color: #ffffff !important;
-}
+  .valor {
+    width: 160px !important;
+    height: 160px !important;
+    font-size: 14px !important;
+    background-color: #003366 !important;
+    border: 2px solid #007acc !important;
+    color: #ffffff !important;
+  }
 
-/* Para os círculos pares */
-.valor:nth-child(even) {
-  background-color: #009999 !important;
-  color: #ffffff !important;
-}
+  .valor:nth-child(even) {
+    background-color: #009999 !important;
+    color: #ffffff !important;
+  }
 
-/* Imagens ajustadas */
-.img-img,
-.img3-img {
-  height: auto !important;
-  border-width: 2px !important;
-  border-color: #ffffff !important;
-}
+  .img-img,
+  .img3-img {
+    height: auto !important;
+    border-width: 2px !important;
+    border-color: #ffffff !important;
+  }
 
-/* Texto dos pilares ajustado */
-#texto-pilares,
-#texto-pilares1 {
-  font-size: 15px !important;
-  margin: 2vw 2vh !important;
-  color: #ffffff !important;
-  font-family: Georgia, 'Times New Roman', Times, serif !important;
-}
+  #texto-pilares,
+  #texto-pilares1 {
+    font-size: 15px !important;
+    margin: 2vw 2vh !important;
+    color: #ffffff !important;
+    font-family: Georgia, 'Times New Roman', Times, serif !important;
+  }
 
-/* Menu mobile */
-.menu-mobile {
-  display: flex;
-  gap: 20px;
-}
+  .menu-mobile {
+    display: flex;
+    gap: 20px;
+  }
 
-/* Botão hamburguer */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  color: #ffffff;
-}
+  .menu-toggle {
+    display: block;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
 
-/* RESPONSIVO */
-@media (max-width: 480px) {
   .menu {
     display: none;
     flex-direction: column;
-    background: #003366; /* mesmo azul escuro */
+    background: #003366;
     position: absolute;
     top: 60px;
     right: 0;
@@ -79,19 +74,7 @@
     padding: 10px;
   }
 
-  .menu a {
-    color: #ffffff !important;
-  }
-
   .menu.show {
     display: flex;
   }
-
-  .menu-toggle {
-    display: block;
-    position: absolute;
-    right: 10px;
-    top: 15px;
-  }
 }
-
