@@ -237,22 +237,22 @@ font-family: 'Courier New', monospace;
   flex: 1 1 300px;
 }
 
-/* Imagem padrão */
+/* Imagem padrão: agora com 500px no desktop */
 .pilar .img img,
 .img3-img,
 .img-img {
   width: 100%;
-  max-width: 400px;
+  max-width: 500px;
   height: auto;
   border-radius: 10px;
 }
 
-/* Mobile: diminuir imagens */
+/* Mobile: imagens menores com 150px */
 @media screen and (max-width: 768px) {
   .pilar .img img,
   .img3-img,
   .img-img {
-    max-width: 200px; /* ou ajuste conforme preferir */
+    max-width: 150px;
     margin: 0 auto;
   }
 }
