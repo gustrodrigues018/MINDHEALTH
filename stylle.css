@@ -232,23 +232,11 @@ body {
   border-radius: 8px;
 }
 
+/* Área geral dos pilares */
 #pilares {
-  margin-bottom: 4vh;
-  background-color: #003366;
-  width: 100%; /* para não estourar no mobile */
-  border-radius: 8px;
-  padding: 2vw;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* essencial pra manter tudo dentro */
-  overflow-x: hidden; /* evita scroll lateral se algo escapar */
-}
-
-/* Título principal */
-#titulo-pilares {
-  color: #ffffff;
-  font-size: 40px;
-  margin: 1vh 0 5vh;
-  text-align: center;
+  margin: 1vh auto 5vh;
+  max-width: 1200px;
+  padding: 0 4vw;
 }
 
 /* Subtítulo dos pilares */
@@ -256,8 +244,8 @@ body {
   color: #009999;
   margin-bottom: 2vh;
   font-size: 24px;
-  margin-left: 70px;
   text-align: left;
+  margin-left: 0;
 }
 
 /* Texto dos pilares */
@@ -265,8 +253,8 @@ body {
   color: #ffffff;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
-  margin: 1vh 6vh 0 80px;
-  max-width: 600px;
+  margin: 1vh 0 0 0;
+  max-width: 700px;
   text-align: left;
 }
 
@@ -275,28 +263,28 @@ body {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
-  gap: 20px;
+  gap: 40px;
   margin-top: 20px;
 }
 
 /* Colunas de texto e imagem */
 .pilar .texto,
 .pilar .img {
-  flex: 1 1 300px;
+  flex: 1 1 45%;
 }
 
 /* Imagem desktop */
 .pilar .img img,
 .img-img {
   width: 100%;
-  max-width: 500px;
+  max-width: 100%;
   height: auto;
   border-radius: 10px;
 }
 
 /* Botão */
 button {
-  margin: 9vh 0 0 80px;
+  margin-top: 5vh;
   padding: 10px 20px;
   background-color: white;
   color: #003366;
@@ -306,30 +294,22 @@ button {
   cursor: pointer;
 }
 
-/* Mobile: responsividade total */
-/* Mobile: responsividade total */
+/* MOBILE: responsividade total */
 @media screen and (max-width: 768px) {
   #pilares {
     padding: 4vw;
-    
-    #subtitulo-pilares,
-#texto-pilares {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  text-align: center;
-}
+  }
+
+  #subtitulo-pilares,
+  #texto-pilares {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    text-align: center;
   }
 
   .pilar {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-  }
-
-  #subtitulo-pilares,
-  #texto-pilares {
-    margin-left: 0;
-    margin-right: 0;
     text-align: center;
   }
 
@@ -341,9 +321,9 @@ button {
   .pilar .img img,
   .img3-img,
   .img-img {
-    max-width: 90vw;     /* Aumenta a largura da imagem pra quase toda a tela */
-    height: 300px;       /* Aumenta a altura da imagem */
-    object-fit: cover;   /* Mantém a proporção sem distorcer */
+    max-width: 90vw;
+    height: 300px;
+    object-fit: cover;
     margin: 0 auto;
     border-radius: 16px;
   }
@@ -353,6 +333,22 @@ button {
     display: block;
   }
 }
+
+/* MISSÃO */
+#missao {
+  background-color: #009999;
+  padding: 3vw;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease-in-out;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#titulo-missao {
+  font-size: 42px;
+  color: #ffffff;
+  margin-bo
+
 
 
 /* MISSÃO */
