@@ -261,6 +261,7 @@ button {
 }
 
 /* Mobile: responsividade total */
+/* Mobile: responsividade total */
 @media screen and (max-width: 768px) {
   #pilares {
     padding: 4vw;
@@ -287,8 +288,11 @@ button {
   .pilar .img img,
   .img3-img,
   .img-img {
-    max-width: 150px;
+    max-width: 90vw;     /* Aumenta a largura da imagem pra quase toda a tela */
+    height: 300px;       /* Aumenta a altura da imagem */
+    object-fit: cover;   /* Mantém a proporção sem distorcer */
     margin: 0 auto;
+    border-radius: 16px;
   }
 
   button {
@@ -296,6 +300,7 @@ button {
     display: block;
   }
 }
+
 
 /* MISSÃO */
 #missao {
