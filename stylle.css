@@ -186,49 +186,125 @@ font-family: 'Courier New', monospace;
   border-radius: 8px;
 }
 
+/* Estilo geral da seção pilares */
 #pilares {
   margin-bottom: 4vh;
-  background-color: #003366; /* Fundo branco */
+  background-color: #003366;
   width: 95.1vw;
   border-radius: 8px;
   padding: 2vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Título principal */
 #titulo-pilares {
-  color: #ffffff; /* Azul escuro */
-  margin-bottom: 1vh;
+  color: #ffffff;
   text-align: center;
   font-size: 40px;
-  margin: 1vh 0vw 9vh 0vw;
+  margin: 1vh 0 5vh;
 }
 
+/* Subtítulo dos pilares */
 #subtitulo-pilares {
-  color: #009999; /* Azul escuro */
+  color: #009999;
   margin-bottom: 2vh;
+  font-size: 24px;
 }
 
+/* Texto dos pilares */
 #texto-pilares {
-  color: #ffffff; /* Azul escuro */
+  color: #ffffff;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  margin: 1vw 6vh 0vw 6vh;
+  font-size: 18px;
+  margin: 1vh auto;
   max-width: 600px;
+  text-align: justify;
 }
 
-#subtitulo-pilares1 {
-  color: #009999; /* Azul escuro */
-  margin-bottom: 1vh;
-  margin: 6vh 0vw 0vh 0vw;
+/* Container dos pilares */
+.pilar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vh;
+  gap: 20px;
 }
 
-#texto-pilares1 {
-  color: #ffffff; /* Azul escuro */
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 20px;
-  margin: 3vw 6vh 3vw 6vh;
-  max-width: 600px;
+/* Bloco de texto */
+.pilar .texto {
+  flex: 1 1 48%;
+  min-width: 300px;
 }
+
+/* Bloco de imagem */
+.pilar .img {
+  flex: 1 1 48%;
+  min-width: 300px;
+  text-align: center;
+}
+
+/* Imagens padronizadas */
+.pilar .img img,
+.img3-img,
+.img-img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Botão "Saiba Mais" */
+button {
+  margin: 3vh 0 0 0;
+  padding: 10px 20px;
+  background-color: white;
+  color: #003366;
+  border: 2px solid #003366;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+  #titulo-pilares {
+    font-size: 28px;
+  }
+
+  #subtitulo-pilares {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  #texto-pilares {
+    font-size: 16px;
+    margin: 2vh 0;
+    padding: 0 10px;
+  }
+
+  .pilar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .pilar .texto,
+  .pilar .img {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .pilar .img img {
+    margin: 0 auto;
+  }
+
+  button {
+    margin: 20px auto;
+    display: block;
+  }
+}
+
 
 /* MISSÃO */
 #missao {
