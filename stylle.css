@@ -232,9 +232,18 @@ button {
 /* -- RESPONSIVIDADE -- */
 @media (max-width: 768px) {
   .pilar .img {
-    max-width: 100% !important;
-    width: 100%;
+    max-width: 90% !important;
+    width: 90%;
   }
+
+  .img-img, .img3-img {
+    height: 200px !important;
+  }
+
+  /* ... restante das regras responsivas ... */
+}
+
+  
 
   #subtitulo-pilares {
     margin-left: 0 !important;
