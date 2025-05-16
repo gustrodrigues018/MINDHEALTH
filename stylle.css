@@ -95,6 +95,18 @@ font-family: 'Courier New', monospace;
   line-height: 2; /* ou em px, ex: 24px */
 }
 
+.menu a:hover {
+  animation::mexe 0.4s ease;
+}
+
+@keyframes mexe {
+0% { transform: translateY(0); }
+25% { transform: translateY(-4px); }
+50% { transform: translateY(4px); }
+75% { transform: translateY(-2px); }
+100% { transform: translateY(0px); }
+}
+
 /* Media Queries para Responsividade */
 
 @media (max-width: 1200px) {
