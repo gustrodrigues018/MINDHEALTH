@@ -21,13 +21,21 @@ html {
   flex-shrink: 0;
 }
 
-.img-img, .img3-img {
+.img-img,  {
   width: 100%;
   max-width: 500px;
   height: 350px;
   object-fit: cover;
   border-radius: 16px;
   border: 4px solid #ffffff;
+}
+img3-img {
+  width: 100%;
+  max-width: 400px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 16px;
+    border: 4px solid #ffffff;
 }
 
 
