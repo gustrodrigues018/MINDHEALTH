@@ -232,16 +232,15 @@ body {
   border-radius: 8px;
 }
 
-/* Área geral dos pilares */
 #pilares {
   margin-bottom: 4vh;
   background-color: #003366;
-  width: 100%; /* para não estourar no mobile */
+  width: 100%;
   border-radius: 8px;
   padding: 2vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  box-sizing: border-box; /* essencial pra manter tudo dentro */
-  overflow-x: hidden; /* evita scroll lateral se algo escapar */
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 /* Título principal */
@@ -307,18 +306,10 @@ button {
   cursor: pointer;
 }
 
-/* Mobile: responsividade total */
-/* Mobile: responsividade total */
+/* MOBILE RESPONSIVO */
 @media screen and (max-width: 768px) {
   #pilares {
     padding: 4vw;
-    
-    #subtitulo-pilares,
-#texto-pilares {
-  margin-left: 0 !important;
-  margin-right: 0 !important;
-  text-align: center;
-}
   }
 
   .pilar {
@@ -329,8 +320,8 @@ button {
 
   #subtitulo-pilares,
   #texto-pilares {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
     text-align: center;
   }
 
@@ -342,9 +333,9 @@ button {
   .pilar .img img,
   .img3-img,
   .img-img {
-    max-width: 90vw;     /* Aumenta a largura da imagem pra quase toda a tela */
-    height: 300px;       /* Aumenta a altura da imagem */
-    object-fit: cover;   /* Mantém a proporção sem distorcer */
+    max-width: 90vw;
+    height: 300px;
+    object-fit: cover;
     margin: 0 auto;
     border-radius: 16px;
   }
@@ -354,6 +345,7 @@ button {
     display: block;
   }
 }
+
 
 /* MISSÃO */
 #missao {
