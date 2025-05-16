@@ -273,16 +273,21 @@ body {
 /* Container de cada item */
 .pilar {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap; /* Mantém lado a lado no desktop */
   align-items: flex-start;
   gap: 20px;
   margin-top: 20px;
 }
 
 /* Colunas de texto e imagem */
-.pilar .texto,
+.pilar .texto {
+  margin-left: 80px;
+  flex: 1;
+  max-width: 600px;
+}
 .pilar .img {
-  flex: 1 1 300px;
+  flex: 1;
+  max-width: 500px;
 }
 
 /* Imagem desktop */
@@ -306,7 +311,7 @@ button {
   cursor: pointer;
 }
 
-/* MOBILE RESPONSIVO */
+/* MOBILE */
 @media screen and (max-width: 768px) {
   #pilares {
     padding: 4vw;
@@ -328,6 +333,7 @@ button {
   .pilar .texto,
   .pilar .img {
     max-width: 100%;
+    margin-left: 0;
   }
 
   .pilar .img img,
@@ -345,6 +351,7 @@ button {
     display: block;
   }
 }
+
 
 
 /* MISSÃO */
