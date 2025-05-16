@@ -186,7 +186,6 @@ font-family: 'Courier New', monospace;
   border-radius: 8px;
 }
 
-/* Estilo geral da seção pilares */
 #pilares {
   margin-bottom: 4vh;
   background-color: #003366;
@@ -199,9 +198,9 @@ font-family: 'Courier New', monospace;
 /* Título principal */
 #titulo-pilares {
   color: #ffffff;
-  text-align: center;
   font-size: 40px;
   margin: 1vh 0 5vh;
+  text-align: center;
 }
 
 /* Subtítulo dos pilares */
@@ -209,6 +208,8 @@ font-family: 'Courier New', monospace;
   color: #009999;
   margin-bottom: 2vh;
   font-size: 24px;
+  margin-left: 70px; /* padrão desktop */
+  text-align: left;
 }
 
 /* Texto dos pilares */
@@ -216,35 +217,27 @@ font-family: 'Courier New', monospace;
   color: #ffffff;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
-  margin: 1vh auto;
+  margin: 1vh 6vh 0 80px; /* padrão desktop */
   max-width: 600px;
-  text-align: justify;
+  text-align: left;
 }
 
 /* Container dos pilares */
 .pilar {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-  margin-top: 4vh;
+  align-items: flex-start;
   gap: 20px;
+  margin-top: 20px;
 }
 
-/* Bloco de texto */
-.pilar .texto {
-  flex: 1 1 48%;
-  min-width: 300px;
-}
-
-/* Bloco de imagem */
+/* Texto e imagem */
+.pilar .texto,
 .pilar .img {
-  flex: 1 1 48%;
-  min-width: 300px;
-  text-align: center;
+  flex: 1 1 300px;
 }
 
-/* Imagens padronizadas */
+/* Imagem padrão */
 .pilar .img img,
 .img3-img,
 .img-img {
@@ -252,12 +245,11 @@ font-family: 'Courier New', monospace;
   max-width: 400px;
   height: auto;
   border-radius: 10px;
-  object-fit: cover;
 }
 
-/* Botão "Saiba Mais" */
+/* BOTÃO */
 button {
-  margin: 3vh 0 0 0;
+  margin: 9vh 0 0 80px;
   padding: 10px 20px;
   background-color: white;
   color: #003366;
@@ -267,43 +259,32 @@ button {
   cursor: pointer;
 }
 
-/* Responsividade */
+/* Estilo mobile: centraliza tudo */
 @media screen and (max-width: 768px) {
-  #titulo-pilares {
-    font-size: 28px;
-  }
-
-  #subtitulo-pilares {
-    font-size: 20px;
+  .pilar {
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
 
+  #subtitulo-pilares,
   #texto-pilares {
-    font-size: 16px;
-    margin: 2vh 0;
-    padding: 0 10px;
-  }
-
-  .pilar {
-    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
     text-align: center;
   }
 
   .pilar .texto,
   .pilar .img {
-    flex: 1 1 100%;
     max-width: 100%;
   }
 
-  .pilar .img img {
-    margin: 0 auto;
-  }
-
   button {
-    margin: 20px auto;
+    margin: 4vh auto 0;
     display: block;
   }
 }
+
 
 
 /* MISSÃO */
