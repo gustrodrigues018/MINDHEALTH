@@ -92,7 +92,22 @@ body {
   padding: 0.6em 0.9em;
   text-decoration: none;
   line-height: 2;
+  display: inline-block;
+  transition: transform 0.3s;
+
 }
+.menu a:hover {
+  animation: mexe 0.4s ease;
+}
+
+@keyframes mexe {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-4px); }
+  50%  { transform: translateY(4px); }
+  75%  { transform: translateY(-2px); }
+  100% { transform: translateY(0); }
+}
+
 
 /* Hamburger menu - mobile */
 .hamburger {
