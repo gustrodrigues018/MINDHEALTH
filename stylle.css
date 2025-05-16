@@ -186,13 +186,16 @@ font-family: 'Courier New', monospace;
   border-radius: 8px;
 }
 
+/* Container geral */
 #pilares {
   margin-bottom: 4vh;
   background-color: #003366;
-  width: 95.1vw;
+  width: 100%; /* para não estourar no mobile */
   border-radius: 8px;
   padding: 2vw;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* essencial pra manter tudo dentro */
+  overflow-x: hidden; /* evita scroll lateral se algo escapar */
 }
 
 /* Título principal */
@@ -208,7 +211,7 @@ font-family: 'Courier New', monospace;
   color: #009999;
   margin-bottom: 2vh;
   font-size: 24px;
-  margin-left: 70px; /* padrão desktop */
+  margin-left: 70px;
   text-align: left;
 }
 
@@ -217,12 +220,12 @@ font-family: 'Courier New', monospace;
   color: #ffffff;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-size: 18px;
-  margin: 1vh 6vh 0 80px; /* padrão desktop */
+  margin: 1vh 6vh 0 80px;
   max-width: 600px;
   text-align: left;
 }
 
-/* Container dos pilares */
+/* Container de cada item */
 .pilar {
   display: flex;
   flex-wrap: wrap;
@@ -231,13 +234,13 @@ font-family: 'Courier New', monospace;
   margin-top: 20px;
 }
 
-/* Texto e imagem */
+/* Colunas de texto e imagem */
 .pilar .texto,
 .pilar .img {
   flex: 1 1 300px;
 }
 
-/* Imagem padrão: agora com 500px no desktop */
+/* Imagem desktop */
 .pilar .img img,
 .img3-img,
 .img-img {
@@ -247,17 +250,7 @@ font-family: 'Courier New', monospace;
   border-radius: 10px;
 }
 
-/* Mobile: imagens menores com 150px */
-@media screen and (max-width: 768px) {
-  .pilar .img img,
-  .img3-img,
-  .img-img {
-    max-width: 150px;
-    margin: 0 auto;
-  }
-}
-
-/* BOTÃO */
+/* Botão */
 button {
   margin: 9vh 0 0 80px;
   padding: 10px 20px;
@@ -269,8 +262,12 @@ button {
   cursor: pointer;
 }
 
-/* Estilo mobile: centraliza tudo */
+/* Mobile: responsividade total */
 @media screen and (max-width: 768px) {
+  #pilares {
+    padding: 4vw;
+  }
+
   .pilar {
     flex-direction: column;
     align-items: center;
@@ -289,13 +286,18 @@ button {
     max-width: 100%;
   }
 
+  .pilar .img img,
+  .img3-img,
+  .img-img {
+    max-width: 150px;
+    margin: 0 auto;
+  }
+
   button {
     margin: 4vh auto 0;
     display: block;
   }
 }
-
-
 
 /* MISSÃO */
 #missao {
