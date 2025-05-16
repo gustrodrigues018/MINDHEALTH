@@ -105,35 +105,7 @@
           <img src="aeroterapia.jpg" alt="Banner do Projeto MindHealth" class="img-img" style="max-width: 600px; height: auto; border-radius: 10px; margin-left: -70px;">
         </div>
       </div>
-    </section>
-  </main>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Função para mostrar/ocultar o conteúdo "Saiba Mais"
-      function toggleSaibaMais() {
-        const conteudo = document.getElementById("saiba-mais");
-        conteudo.style.display = (conteudo.style.display === "none" || conteudo.style.display === "") ? "block" : "none";
-      }
-
-      // Expondo a função no escopo global para que possa ser chamada pelo HTML (onclick)
-      window.toggleSaibaMais = toggleSaibaMais;
-
-      // Lógica do carrossel de imagens
-      const carousel = document.getElementById('carousel');
-
-      if (carousel) {
-        let currentIndex = 0;
-        const totalSlides = carousel.children.length;
-
-        setInterval(() => {
-          currentIndex = (currentIndex + 1) % totalSlides;
-          carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }, 3000); // muda a imagem a cada 3 segundos
-      }
-    });
-  </script>
-
+      
    <div class="pilar par">
     <div class="texto">
        <div class="pilar par">
@@ -171,7 +143,32 @@
             <img src="Inovacao-tecnologica-capa-1-1.jpg" alt="Banner do Projeto MindHealth" class="img-img">
         </div>
     </div>
- 
+   <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Função para mostrar/ocultar o conteúdo "Saiba Mais"
+      function toggleSaibaMais() {
+        const conteudo = document.getElementById("saiba-mais");
+        conteudo.style.display = (conteudo.style.display === "none" || conteudo.style.display === "") ? "block" : "none";
+      }
+
+      // Expondo a função no escopo global para que possa ser chamada pelo HTML (onclick)
+      window.toggleSaibaMais = toggleSaibaMais;
+
+      // Lógica do carrossel de imagens
+      const carousel = document.getElementById('carousel');
+
+      if (carousel) {
+        let currentIndex = 0;
+        const totalSlides = carousel.children.length;
+
+        setInterval(() => {
+          currentIndex = (currentIndex + 1) % totalSlides;
+          carousel.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }, 3000); // muda a imagem a cada 3 segundos
+      }
+    });
+  </script>
+
 </section>
 
         <section id="valores">
