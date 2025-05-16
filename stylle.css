@@ -196,6 +196,14 @@ font-family: 'Courier New', monospace;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-bottom: 4vh;
+  background-color: #003366;
+  width: 100%; /* para não estourar no mobile */
+  border-radius: 8px;
+  padding: 2vw;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* essencial pra manter tudo dentro */
+  overflow-x: hidden; /* evita scroll lateral se algo escapar */
   }
 
   #subtitulo-pilares,
