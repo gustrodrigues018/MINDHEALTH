@@ -265,6 +265,13 @@ button {
 @media screen and (max-width: 768px) {
   #pilares {
     padding: 4vw;
+    
+    #subtitulo-pilares,
+#texto-pilares {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  text-align: center;
+}
   }
 
   .pilar {
