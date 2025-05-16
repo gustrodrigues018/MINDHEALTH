@@ -1,0 +1,29 @@
+@media (max-width: 480px) {
+    .nav {
+      height: 60px !important;
+    }
+
+    #sitetitulo {
+      font-size: 1.6em !important;
+    }
+
+    .menu a {
+      font-size: 0.75rem !important;
+    }
+
+    .valor {
+      width: 160px !important;
+      height: 160px !important;
+      font-size: 14px !important;
+    }
+
+    .img-img, .img3-img {
+      height: auto !important;
+      border-width: 2px !important;
+    }
+
+    #texto-pilares, #texto-pilares1 {
+      font-size: 15px !important;
+      margin: 2vw 2vh !important;
+    }
+  }
