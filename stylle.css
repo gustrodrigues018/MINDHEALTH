@@ -232,16 +232,13 @@ button {
 /* -- RESPONSIVIDADE -- */
 @media (max-width: 768px) {
   .pilar .img {
-    max-width: 90% !important;
-    width: 90%;
-  }
-
+    max-width: 80% !important;
+    width: 70%;
+    
   .img-img, .img3-img {
     height: 200px !important;
   }
 
-  /* ... restante das regras responsivas ... */
-}
 
   
 
