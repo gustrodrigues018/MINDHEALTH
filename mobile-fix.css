@@ -27,3 +27,42 @@
       margin: 2vw 2vh !important;
     }
   }
+
+.menu-mobile {
+  display: flex;
+  gap: 20px;
+}
+
+/* Botão escondido no desktop */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVO */
+@media (max-width: 480px) {
+  .menu {
+    display: none;
+    flex-direction: column;
+    background: #f2f2f2;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .menu.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 15px;
+  }
+}
