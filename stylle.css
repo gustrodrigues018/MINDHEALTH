@@ -247,6 +247,16 @@ font-family: 'Courier New', monospace;
   border-radius: 10px;
 }
 
+/* Mobile: diminuir imagens */
+@media screen and (max-width: 768px) {
+  .pilar .img img,
+  .img3-img,
+  .img-img {
+    max-width: 250px; /* ou ajuste conforme preferir */
+    margin: 0 auto;
+  }
+}
+
 /* BOTÃO */
 button {
   margin: 9vh 0 0 80px;
