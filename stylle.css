@@ -170,7 +170,7 @@ body {
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
   margin-bottom: 4vh;
   overflow-x: hidden;
-  width: 90%;
+  width: 83%;
 }
 
 .pilar {
@@ -232,8 +232,8 @@ button {
 /* -- RESPONSIVIDADE -- */
 @media (max-width: 768px) {
   .pilar .img {
-    max-width: 60%;
-    width: 60%;
+    max-width: 40%;
+    width: 30%;
 }
     #pilar {
  width:97%;
