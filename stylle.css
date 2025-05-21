@@ -278,6 +278,8 @@ button {
   padding: 3vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
+  width: 96%;
+
 }
 
 #titulo-missao {
@@ -305,6 +307,8 @@ button {
   padding: 3vw;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
+  width: 96%;
+
 }
 
 #titulo-visao {
@@ -359,6 +363,8 @@ button {
   gap: 40px;
   padding: 40px;
   background:white;
+  width: 96%;
+
 }
 
 .esfera {
