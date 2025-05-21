@@ -6,6 +6,7 @@ html {
 
 .pilar {
   display: flex;
+    margin: 5vw auto;
   align-items: flex-start;
   gap: 5vw; /* Reduzir o gap para telas pequenas */
   flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
