@@ -186,6 +186,18 @@
   </div>
   <div id="texto-valor-expandido" class="valor-texto"><p></p></div>
 </section>
+           <script>
+  document.querySelectorAll('.esfera').forEach(esfera => {
+    esfera.addEventListener('click', () => {
+      const texto = esfera.getAttribute('data-text');
+      const containerTexto = document.getElementById('texto-valor-expandido');
+      containerTexto.style.display = 'block';
+      containerTexto.querySelector('p').textContent = texto;
+    });
+  });
+
+  </script>
+
 
 
         <section id="visao">
