@@ -352,63 +352,48 @@ button {
   }
 }
 
-.valores-container {
+.esferas-valores {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 40px;
-  max-width: 95%;
-  box-sizing: border-box;
-  padding: 0 2vw;
+  gap: 40px;
+  padding: 40px;
 }
 
-/* Estilo das esferas */
-.valor {
-  width: 210px;
-  height: 210px;
+.esfera {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
-  background-color: #003366;
-  border: 2px solid #007acc;
+  background: linear-gradient(135deg, #004080, #00b4d8);
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-weight: bold;
-  font-size: 16px;
-  color: #ffffff;
-  margin: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: 
-    opacity 0.5s ease, 
-    transform 0.5s ease, 
-    background-color 0.5s ease, 
-    color 0.5s ease;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.valor.visible {
-  opacity: 1;
-  transform: translateY(0);
+.esfera:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
-/* Estilo alternado */
-.valor:nth-child(even) {
-  background-color: #009999;
-  color: #ffffff;
+.valor-texto {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border-left: 5px solid #003366;
+  font-size: 1.1rem;
+  color: #003366;
+  background: #f0f8ff;
+  border-radius: 8px;
+  display: none;
 }
 
-/* Blur nos itens não-hover */
-.valores-container .valor:not(:hover) {
-  filter: blur(4px);
-  transition: filter 0.3s ease;
-}
-
-/* Hover */
-.valor:hover {
-  background-color: #007acc;
-  color: #ffffff;
-  filter: blur(0);
-  transition: filter 0.3s ease;
-}
 
 /* Título seções */
 .titulo-section, 
