@@ -356,15 +356,24 @@ button {
   }
 }
 
+#valores {
+  background: white;
+  padding: 40px 20px;
+}
+
+#titulo-valores {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  color: #003366;
+  font-weight: bold;
+}
+
 .esferas-valores {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 40px;
-  padding: 40px;
-  background: white;
-  width: 100vw; /* Colado nas bordas */
-  margin: 0;
   box-sizing: border-box;
 }
 
@@ -392,7 +401,7 @@ button {
 
 .valor-texto {
   max-width: 800px;
-  margin: 40px auto;
+  margin: 60px auto 0 auto;
   padding: 20px;
   border-left: 5px solid #003366;
   font-size: 1.1rem;
