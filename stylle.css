@@ -361,8 +361,8 @@ button {
 }
 
 .esfera {
-  width: 140px;
-  height: 140px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   background: linear-gradient(135deg, #004080, #00b4d8);
   color: white;
