@@ -270,17 +270,16 @@ button {
   }
 }
 
-
-
-/* MISSÃO */
 #missao {
   background-color: #009999;
   padding: 3vw;
+  width: 100vw; /* Toma toda a largura da tela */
+  margin: 0; /* Remove margens laterais */
+  box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
-  width: 96%;
-
 }
+
 
 #titulo-missao {
   font-size: 42px;
@@ -301,15 +300,16 @@ button {
   margin: 0 auto;
 }
 
-/* VISÃO */
 #visao {
   background: linear-gradient(135deg, #003366, #005b99);
   padding: 3vw;
+  width: 100vw;
+  margin: 0;
+  box-sizing: border-box;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: all 0.3s ease-in-out;
-  width: 96%;
-
 }
+
 
 #titulo-visao {
   font-size: 42px;
@@ -362,8 +362,11 @@ button {
   justify-content: center;
   gap: 40px;
   padding: 40px;
-  background:white;
-  width: 96%;
+  background: white;
+  width: 100vw; /* Colado nas bordas */
+  margin: 0;
+  box-sizing: border-box;
+}
 
 }
 
@@ -542,3 +545,11 @@ ul li {
  .bloco-diferenciais{
   color:black;
  }
+
+  #banner {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
