@@ -232,7 +232,7 @@ button {
 /* -- RESPONSIVIDADE -- */
 @media (max-width: 768px) {
   #pilares {
-    width: 97%;
+    width: 90%;
   }
 
   .pilar {
@@ -241,7 +241,7 @@ button {
   }
 
   .pilar .img {
-    max-width: 80%;
+    max-width: 60%;
     width: 100%;
   }
 
