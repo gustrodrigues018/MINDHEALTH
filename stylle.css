@@ -231,15 +231,24 @@ button {
 
 /* -- RESPONSIVIDADE -- */
 @media (max-width: 768px) {
+  #pilares {
+    width: 97%;
+  }
+
+  .pilar {
+    gap: 3vw;
+    justify-content: center;
+  }
+
   .pilar .img {
-    max-width: 40%;
-    width: 30%;
-}
-    #pilar {
- width:97%;
-}
-}
-  
+    max-width: 80%;
+    width: 100%;
+  }
+
+  .img-img,
+  .img3-img {
+    height: 200px; /* Redução da altura no mobile */
+  }
 
   #subtitulo-pilares {
     margin-left: 0 !important;
@@ -259,12 +268,8 @@ button {
     display: block;
     font-size: 14px;
   }
-
-  .pilar {
-    gap: 3vw;
-    justify-content: center;
-  }
 }
+
 
 
 /* MISSÃO */
