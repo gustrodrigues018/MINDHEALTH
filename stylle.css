@@ -355,30 +355,34 @@ button {
 .valores-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center; /* Mais seguro que space-around */
+  justify-content: center;
   margin-bottom: 40px;
   max-width: 95%;
   box-sizing: border-box;
   padding: 0 2vw;
 }
 
-
+/* Estilo das esferas */
 .valor {
   width: 210px;
   height: 210px;
   border-radius: 50%;
-  background-color: #003366; /* Azul escuro */
+  background-color: #003366;
   border: 2px solid #007acc;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
   font-size: 16px;
-  color: rgb(255, 255, 255);
+  color: #ffffff;
   margin: 30px;
   opacity: 0;
   transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease, background-color 0.5s ease, color 0.5s ease;
+  transition: 
+    opacity 0.5s ease, 
+    transform 0.5s ease, 
+    background-color 0.5s ease, 
+    color 0.5s ease;
 }
 
 .valor.visible {
@@ -386,16 +390,19 @@ button {
   transform: translateY(0);
 }
 
+/* Estilo alternado */
 .valor:nth-child(even) {
   background-color: #009999;
-  color: #ffffff; /* Azul escuro */
+  color: #ffffff;
 }
 
+/* Blur nos itens não-hover */
 .valores-container .valor:not(:hover) {
   filter: blur(4px);
   transition: filter 0.3s ease;
 }
 
+/* Hover */
 .valor:hover {
   background-color: #007acc;
   color: #ffffff;
@@ -403,22 +410,38 @@ button {
   transition: filter 0.3s ease;
 }
 
-.titulo-section {
+/* Título seções */
+.titulo-section, 
+.titulo-valores {
   font-size: 2rem;
-  color: #ffffff;
   margin-bottom: 1rem;
   border-left: 5px solid #00b3b3;
   padding-left: 10px;
- text-align:center;
+  text-align: center;
+}
+
+/* Título específico */
+.titulo-section {
+  color: #ffffff;
 }
 
 .titulo-valores {
-  font-size: 2rem;
   color: #003366;
-  margin-bottom: 1rem;
-  border-left: 5px solid #00b3b3;
-  padding-left: 10px;
- text-align:center;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .valor {
+    width: 150px;
+    height: 150px;
+    font-size: 14px;
+    margin: 20px;
+  }
+
+  .titulo-section,
+  .titulo-valores {
+    font-size: 1.5rem;
+  }
 }
 
 .titulo-Depoimentos {
