@@ -8,7 +8,6 @@ html {
   display: flex;
   align-items: flex-start;
   gap: 5vw; /* Reduzir o gap para telas pequenas */
-  margin: 5vw auto;
   flex-wrap: wrap; /* Permite que os itens se movam para a linha seguinte em telas menores */
   justify-content: center; /* Alinha os itens ao centro em telas pequenas */
 }
