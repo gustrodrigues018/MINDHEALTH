@@ -560,3 +560,17 @@ ul li {
   box-sizing: border-box;
 }
 
+  #missao,
+#sobre {
+  margin: 0;
+  padding: 0;
+}
+
+#missao h2,
+#missao p,
+#sobre h2 {
+  margin: 0;
+  padding: 0;
+}
+
+
