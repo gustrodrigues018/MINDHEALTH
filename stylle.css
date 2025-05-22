@@ -89,6 +89,7 @@ body {
 }
 
 .menu a {
+  position: relative;
   color: #ffffff;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-size: 1.1em;
@@ -96,14 +97,29 @@ body {
   text-decoration: none;
   line-height: 2;
   display: inline-block;
-  transition: transform 0.3s, border-bottom 0.3s;
-  border-bottom: 2px solid transparent; /* linha invisível por padrão */
+  transition: transform 0.3s;
 }
 
-.menu a:hover {
-  border-bottom: 2px solid white; /* aparece ao passar o mouse */
-  animation: mexe 0.4s ease;
+.menu a::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* rente ao texto */
+  left: 0;
+  height: 2px;
+  width: 0;
+  background-color: #ffffff;
+  transition: width 0.3s ease;
 }
+
+.menu a:hover::after {
+  width: 100%; /* linha cresce */
+}
+
+/* Exclui o título "Mind Health" do efeito */
+#sitetitulo::after {
+  display: none;
+}
+
 
 @keyframes mexe {
   0%   { transform: translateY(0); }
