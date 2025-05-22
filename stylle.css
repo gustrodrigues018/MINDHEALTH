@@ -85,7 +85,17 @@ body {
 /* Menu links */
 .menu {
   display: flex;
+  justify-content: center;
   gap: 2vw;
+  align-items: center; /* Alinha tudo verticalmente ao centro */
+}
+
+.menu h3 {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
+  margin: 0;
+  padding: 0;
 }
 
 .menu a {
@@ -93,17 +103,20 @@ body {
   color: #ffffff;
   font-family: "Segoe UI", Verdana, sans-serif;
   font-size: 1.1em;
-  padding: 0.6em 0.9em;
+  padding: 0.2em 0.9em;
   text-decoration: none;
-  line-height: 2;
+  line-height: 1.4;
   display: inline-block;
-  transition: transform 0.3s;
+  transition: transform 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent;
+  margin-top: -8px; /* Eleva os links */
 }
 
+/* Efeito linha temporária ao passar o mouse */
 .menu a::after {
   content: "";
   position: absolute;
-  bottom: 0; /* rente ao texto */
+  bottom: 0;
   left: 0;
   height: 2px;
   width: 0;
@@ -112,13 +125,21 @@ body {
 }
 
 .menu a:hover::after {
-  width: 100%; /* linha cresce */
+  width: 100%;
 }
 
-/* Exclui o título "Mind Health" do efeito */
+/* Título central fixo (não move) */
+#sitetitulo {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+}
+
 #sitetitulo::after {
   display: none;
 }
+
 
 
 @keyframes mexe {
