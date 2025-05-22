@@ -96,10 +96,12 @@ body {
   text-decoration: none;
   line-height: 2;
   display: inline-block;
-  transition: transform 0.3s;
-
+  transition: transform 0.3s, border-bottom 0.3s;
+  border-bottom: 2px solid transparent; /* linha invisível por padrão */
 }
+
 .menu a:hover {
+  border-bottom: 2px solid white; /* aparece ao passar o mouse */
   animation: mexe 0.4s ease;
 }
 
