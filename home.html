@@ -345,72 +345,67 @@ Graças à ajuda da MindHealht, posso me orgulhar por ter superado e aprendido a
     </div>
   </div>
 </section>
-
   <footer class="footer">
-  <div class="footer-content">
-    <div class="footer-logo">
-      <img src="logo.jpg" alt="Logo Mind Health" />
-      <h2>Mind Health</h2>
-      <p>Bem-estar emocional e saúde mental em primeiro lugar.</p>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Mind Health</h2>
+        <p>Bem-estar emocional e saúde mental em primeiro lugar.</p>
+      </div>
+
+      <div class="footer-contact">
+        <h3>Contato</h3>
+        <p>📧 Email: contato@mindhealth.com</p>
+        <p>📱 WhatsApp: (11) 91234-5678</p>
+        <p>☎️ Telefone: (11) 1234-5678</p>
+      </div>
     </div>
 
-    <div class="footer-contact">
-      <h3>Contato</h3>
-      <p>📧 Email: contato@mindhealth.com</p>
-      <p>📱 WhatsApp: (11) 91234-5678</p>
-      <p>☎️ Telefone: (11) 1234-5678</p>
+    <div class="footer-bottom">
+      <p>&copy; 2025 Mind Health — Todos os direitos reservados.</p>
     </div>
-  </div>
+  </footer>
 
-  <div class="footer-bottom">
-    <p>&copy; 2025 Mind Health — Todos os direitos reservados.</p>
-  </div>
-</footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const valores = document.querySelectorAll('.valor');
+      const valorTexto = document.getElementById('valor-texto');
+      const options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+      };
 
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // Para não observar novamente
+          }
+        });
+      }, options);
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            const valores = document.querySelectorAll('.valor');
-            const valorTexto = document.getElementById('valor-texto');
-            const options = {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.1
-            };
-        
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Para não observar novamente
-                    }
-                });
-            }, options);
-        
-            valores.forEach(valor => {
-                observer.observe(valor);
-        
-                // Adiciona evento de mouseover e mouseout
-                valor.addEventListener('mouseover', () => {
-                    valores.forEach(v => {
-                        if (v !== valor) {
-                            v.style.filter = 'blur(4px)'; // Aplica desfoque aos outros círculos
-                        }
-                    });
-                    valorTexto.innerHTML = `<p>${valor.dataset.text}</p>`; // Atualiza o texto
-                });
-        
-                valor.addEventListener('mouseout', () => {
-                    valores.forEach(v => {
-                        v.style.filter = 'none'; // Remove desfoque ao sair do círculo
-                    });
-                    valorTexto.innerHTML = `<p></p>`; // Reseta o texto
-                });
-            });
+      valores.forEach(valor => {
+        observer.observe(valor);
+
+        // Adiciona evento de mouseover e mouseout
+        valor.addEventListener('mouseover', () => {
+          valores.forEach(v => {
+            if (v !== valor) {
+              v.style.filter = 'blur(4px)'; // Aplica desfoque aos outros círculos
+            }
+          });
+          valorTexto.innerHTML = `<p>${valor.dataset.text}</p>`; // Atualiza o texto
         });
 
-</body>
-</html>
-    </script>
+        valor.addEventListener('mouseout', () => {
+          valores.forEach(v => {
+            v.style.filter = 'none'; // Remove desfoque ao sair do círculo
+          });
+          valorTexto.innerHTML = `<p></p>`; // Reseta o texto
+        });
+      });
+    });
+  </script>
+
 </body>
 </html>
