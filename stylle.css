@@ -245,11 +245,12 @@ button {
 
   .pilar .img {
     max-width: 50%;
-    width: 60%;
+    width: 40%;
   }
 
   .img-img,
   .img3-img {
+    width: 250px; /* Redução da altura no mobile */
     height: 200px; /* Redução da altura no mobile */
   }
 
