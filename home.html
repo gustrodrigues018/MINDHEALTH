@@ -322,6 +322,17 @@ document.addEventListener('DOMContentLoaded', function () {
       <li> <strong>Baseada em Evidências:</strong> Eficácia comprovada para fobias, ansiedade e TEA.</li>
     </ul>
   </div>
+      <div class="video-diferencial" style="margin-top: 40px; text-align: center;">
+  <h3 class="subtitulo-section">Veja a Aeroterapia em Ação</h3>
+  <video id="videoMindHealth" width="640" controls>
+    <source src="caminho-do-seu-video.mp4" type="video/mp4">
+    Seu navegador não suporta a reprodução de vídeo.
+  </video>
+  <br>
+  <button onclick="telaCheiaVideo()" style="margin-top: 10px; padding: 8px 16px; font-size: 16px; cursor: pointer;">
+    Assistir em Tela Cheia
+  </button>
+</div>
       </div>
     </div>
   </div>
@@ -408,6 +419,18 @@ Graças à ajuda da MindHealht, posso me orgulhar por ter superado e aprendido a
         });
       });
     });
+
+     function fullscreenVideo() {
+    const video = document.getElementById("videoMindHealth");
+
+    if (video.requestFullscreen) {
+      video.requestFullscreen();
+    } else if (video.webkitRequestFullscreen) { /* Safari */
+      video.webkitRequestFullscreen();
+    } else if (video.msRequestFullscreen) { /* IE11 */
+      video.msRequestFullscreen();
+    }
+  }
   </script>
 
 </body>
