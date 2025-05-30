@@ -718,8 +718,8 @@ ul li {
 
 .video-element {
   width: 100%;
-  max-width: 500px;
-  height: 350px;
+  max-width: 650px;
+  height: 450px;
   object-fit: cover;
   border-radius: 16px;
   border: 4px solid #ffffff;
