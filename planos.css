@@ -96,7 +96,7 @@
     grid-template-columns: 80px 1fr;
     align-items: center;
     height: auto;
-    width: 600px;
+    width: 540px;
     gap: 20px;          /* antes 30px */
     padding: 15px;      /* antes 20px */
 }
@@ -106,7 +106,7 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    font-size: 46px;    /* antes 40px */
+    font-size: 50px;    /* antes 40px */
     margin: 0;
     color: #003366;
     font-weight: bold;
