@@ -93,60 +93,59 @@
 /* Card SUS horizontal com título na lateral */
 .plano-card.sus {
     display: grid;
-    grid-template-columns: 80px 1fr; /* coluna estreita pro título, outra pro conteúdo */
-    align-items: center; /* centraliza verticalmente */
+    grid-template-columns: 80px 1fr;
+    align-items: center;
     height: auto;
-    width: 700px; /* pode ajustar */
-    gap: 30px;
-    padding: 20px;
+    width: 700px;
+    gap: 20px;          /* antes 30px */
+    padding: 15px;      /* antes 20px */
 }
 
-/* Título na lateral esquerda, escrito de baixo pra cima */
+/* Título na lateral esquerda */
 .plano-card.sus h3 {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    font-size: 40px;
+    font-size: 36px;    /* antes 40px */
     margin: 0;
     color: #003366;
     font-weight: bold;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
 }
 
-/* Conteúdo lado direito */
+/* Conteúdo do lado direito */
 .plano-card.sus .conteudo-sus {
     display: flex;
     flex-direction: column;
-    justify-content: center;   /* centraliza verticalmente */
-    align-items: center;       /* centraliza horizontalmente */
-    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;           /* antes 15px */
     text-align: center;
     width: 100%;
 }
 
-/* Área dos benefícios */
+/* Lista de benefícios */
 .plano-card.sus .beneficios {
     display: flex;
     flex-direction: column;
-    align-items: center;       /* centraliza */
+    align-items: center;
     justify-content: center;
-    margin: 15px 0;
+    margin: 10px 0;     /* antes 15px */
     text-align: center;
-    width: fit-content;        /* ocupa largura do maior item */
+    width: fit-content;
     margin-left: auto;
     margin-right: auto;
     border-top: 1px solid #ccc;
 }
 
-/* Cada benefício em “linha de caderno” */
+/* Cada benefício em linha */
 .plano-card.sus .beneficios li {
     list-style: none;
-    font-size: 16px;
-    padding: 10px 0;
-    width: 100%;               /* todos do mesmo tamanho */
+    font-size: 15px;    /* levemente menor */
+    padding: 6px 0;     /* antes 10px */
+    width: 100%;
     border-bottom: 1px solid #ccc;
 }
-
 
 
 .plano-card {
