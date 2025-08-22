@@ -93,36 +93,59 @@
 /* Card SUS horizontal com título na lateral */
 .plano-card.sus {
     display: grid;
-    grid-template-columns: 60px 1fr; /* coluna fina pro título, outra pro conteúdo */
-    align-items: flex-start;
+    grid-template-columns: 80px 1fr; /* mais espaço pro título */
+    align-items: center; /* centraliza verticalmente */
     height: auto;
-    width: 600px;
-    gap: 20px;
+    width: 700px; /* mais larguinho */
+    gap: 30px;
+    padding: 20px;
 }
 
 /* Título na lateral esquerda, escrito de baixo pra cima */
 .plano-card.sus h3 {
-    writing-mode: vertical-rl; /* texto na vertical */
-    transform: rotate(180deg); /* deixa de baixo para cima */
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
     text-align: center;
-    font-size: 60px;
+    font-size: 40px; /* menor que 60px pra não esmagar */
     margin: 0;
     color: #003366;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-/* Ajuste do conteúdo do lado direito */
+/* Conteúdo lado direito */
 .plano-card.sus .conteudo-sus {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-    gap: 8px;
-}
-
-.plano-card.sus ul {
-    margin-top: 5px;
-    padding-left: 20px;
+    justify-content: center; /* centraliza verticalmente */
+    align-items: center;     /* centraliza horizontalmente */
+    gap: 12px;
     text-align: center;
 }
+
+/* Lista mais bonitinha */
+.plano-card.sus ul {
+    list-style: none; /* tira bolinhas */
+    padding: 0;
+    margin: 10px 0;
+}
+
+.plano-card.sus ul li {
+    margin: 6px 0;
+    font-size: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+/* Bolinha estilizada ao invés do padrão feio */
+.plano-card.sus ul li::before {
+    content: "•";
+    color: #006bb3;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+}
+
 
 .plano-card {
         background-color: #ffffff;
