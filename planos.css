@@ -113,6 +113,16 @@
     letter-spacing: 1px;
 }
 
+/* Estilo só para o "Gratuito" do plano SUS */
+.plano-card.sus .preco-sus {
+    font-size: 24px;       /* maior que o resto */
+    font-weight: bold;
+    color: #008000;        /* verde pra dar destaque */
+    margin: 5px 0 10px;    /* ajusta espaço em volta */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
 /* Conteúdo do lado direito */
 .plano-card.sus .conteudo-sus {
     display: flex;
