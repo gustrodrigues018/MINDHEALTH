@@ -93,10 +93,10 @@
 /* Card SUS horizontal com título na lateral */
 .plano-card.sus {
     display: grid;
-    grid-template-columns: 80px 1fr; /* mais espaço pro título */
+    grid-template-columns: 80px 1fr; /* coluna estreita pro título, outra pro conteúdo */
     align-items: center; /* centraliza verticalmente */
     height: auto;
-    width: 700px; /* mais larguinho */
+    width: 700px; /* pode ajustar */
     gap: 30px;
     padding: 20px;
 }
@@ -106,7 +106,7 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    font-size: 40px; /* menor que 60px pra não esmagar */
+    font-size: 40px;
     margin: 0;
     color: #003366;
     font-weight: bold;
@@ -117,34 +117,36 @@
 .plano-card.sus .conteudo-sus {
     display: flex;
     flex-direction: column;
-    justify-content: center; /* centraliza verticalmente */
-    align-items: center;     /* centraliza horizontalmente */
-    gap: 12px;
+    justify-content: center;   /* centraliza verticalmente */
+    align-items: center;       /* centraliza horizontalmente */
+    gap: 15px;
     text-align: center;
+    width: 100%;
 }
 
-/* Lista mais bonitinha */
-.plano-card.sus ul {
-    list-style: none; /* tira bolinhas */
-    padding: 0;
-    margin: 10px 0;
+/* Área dos benefícios */
+.plano-card.sus .beneficios {
+    display: flex;
+    flex-direction: column;
+    align-items: center;       /* centraliza */
+    justify-content: center;
+    margin: 15px 0;
+    text-align: center;
+    width: fit-content;        /* ocupa largura do maior item */
+    margin-left: auto;
+    margin-right: auto;
+    border-top: 1px solid #ccc;
 }
 
-.plano-card.sus ul li {
-    margin: 6px 0;
+/* Cada benefício em “linha de caderno” */
+.plano-card.sus .beneficios li {
+    list-style: none;
     font-size: 16px;
-    position: relative;
-    padding-left: 20px;
+    padding: 10px 0;
+    width: 100%;               /* todos do mesmo tamanho */
+    border-bottom: 1px solid #ccc;
 }
 
-/* Bolinha estilizada ao invés do padrão feio */
-.plano-card.sus ul li::before {
-    content: "•";
-    color: #006bb3;
-    font-weight: bold;
-    position: absolute;
-    left: 0;
-}
 
 
 .plano-card {
