@@ -89,6 +89,24 @@
     .btn-assinar:hover {
         background-color: #005499;
     }
+/* Plano SUS em estilo horizontal */
+.plano-card.sus {
+    flex-direction: row; /* deixa o conteúdo lado a lado */
+    align-items: flex-start;
+    height: auto; /* não precisa ser fixo */
+    width: 600px; /* pode ajustar conforme necessário */
+    gap: 20px; /* espaço entre os elementos */
+}
+
+/* Ajusta título e textos para caber bem na horizontal */
+.plano-card.sus h3 {
+    flex: 0 0 200px; /* título ocupa uma parte fixa */
+    text-align: left; /* agora alinhado à esquerda */
+}
+
+.plano-card.sus ul {
+    margin-top: 0;
+}
 
     /* Cards de Planos */
     .plano-card {
