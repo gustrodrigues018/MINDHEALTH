@@ -106,7 +106,7 @@
     writing-mode: vertical-rl;
     transform: rotate(180deg);
     text-align: center;
-    font-size: 60px;    /* antes 40px */
+    font-size: 50px;    /* antes 40px */
     margin: 0;
     color: #003366;
     font-weight: bold;
