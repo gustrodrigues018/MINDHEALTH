@@ -96,7 +96,7 @@
     grid-template-columns: 80px 1fr;
     align-items: center;
     height: auto;
-    width: 570px;
+    width: 590px;
     gap: 20px;          /* antes 30px */
     padding: 15px;      /* antes 20px */
 }
