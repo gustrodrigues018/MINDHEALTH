@@ -5,57 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>MindHealth</title>
 <link rel="stylesheet" href="stylle.css"></head>
-<style>
-.color {
-    border-top: 6px solid #ff9900;
-    background-color: #fff8ec;
-    color: #022548;
-    border-radius: 8px;
-    padding: 20px;
-}
-
-.color1 {
-    border-top: 6px solid #ff9900;
-    background-color: #7cc6fe;
-    color: #022548;
-    border-radius: 30px;
-    padding: 20px;
-}
-
-.color2 {
-    border-top: 6px solid #ff9900;
-    background-color: #0088cc;
-    color: #022548;
-    border-radius: 30px;
-    padding: 20px;
-}
-
-/* Para alinhar texto e imagem dentro da color */
-.color-content {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    gap: 20px;
-}
-
-.color-content .texto {
-    flex: 1;
-    min-width: 300px;
-}
-
-.color-content .img {
-    flex: 1;
-    min-width: 200px;
-    max-width: 600px;
-    text-align: center;
-}
-
-.color-content img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-</style>
 
 <body>
 
@@ -91,128 +40,117 @@
       <h2 id="titulo-pilares">Os Pilares do Nosso Projeto</h2>
 
       <div class="pilar" style="display: flex; flex-wrap: wrap; align-items: flex-start; gap: 20px; margin-top: 20px;">
+        <!-- Texto à esquerda -->
+        <div class="texto" style="flex: 1; min-width: 300px;">
+       <h2 id="subtitulo-pilares">1. Terapias com Realidade Virtual</h2>
+<p id="texto-pilares">
+Utilizamos realidade virtual (VR) para proporcionar experiências terapêuticas imersivas, seguras e controladas. Essa tecnologia permite que os pacientes enfrentem situações desafiadoras em um ambiente protegido, promovendo o desenvolvimento gradual de habilidades emocionais e comportamentais.
 
-  <!-- Texto + Imagem dentro da div color -->
-  <div class="texto" style="flex: 1; min-width: 300px;">
-    <div class="color" style="flex: 1; min-width: 300px; border-top: 6px solid #ff9900; background-color: #fff8ec; padding: 20px;">
+Um exemplo é a aeroterapia com VR, que expõe o paciente, de forma progressiva, a simulações realistas de voo — incluindo decolagens, turbulências e pousos — ajudando a reduzir a ansiedade e o medo de voar. Essa abordagem oferece um ambiente controlado onde o paciente pode desenvolver resiliência e autonomia emocional.
 
-      <!-- Título -->
-      <h2 id="subtitulo-pilares">1. Terapias com Realidade Virtual</h2>
+Essa terapia é parte do nosso compromisso com a inovação constante e a personalização do cuidado em saúde mental.
 
-      <!-- Texto -->
-      <p id="texto-pilares">
-        Utilizamos realidade virtual (VR) para proporcionar experiências terapêuticas imersivas, seguras e controladas. Essa tecnologia permite que os pacientes enfrentem situações desafiadoras em um ambiente protegido, promovendo o desenvolvimento gradual de habilidades emocionais e comportamentais.
+</p>
 
-        Um exemplo é a aeroterapia com VR, que expõe o paciente, de forma progressiva, a simulações realistas de voo — incluindo decolagens, turbulências e pousos — ajudando a reduzir a ansiedade e o medo de voar. Essa abordagem oferece um ambiente controlado onde o paciente pode desenvolver resiliência e autonomia emocional.
 
-        Essa terapia é parte do nosso compromisso com a inovação constante e a personalização do cuidado em saúde mental.
-      </p>
+          <!-- Botão -->
+          <button 
+            onclick="toggleSaibaMais()" 
+            style="margin: 9vh 0vw 0vh 80px; padding: 10px 20px; background-color: white; color: #003366; border: 2px solid #003366; border-radius: 8px; font-size: 16px; cursor: pointer;">
+            Saiba mais
+          </button>
 
-      <!-- Imagem dentro da cor -->
-      <div style="text-align: center; margin: 20px 0;">
-        <img src="aeroterapia.jpg.png" alt="Banner do Projeto MindHealth" style="max-width: 100%; height: auto;">
+          <!-- Conteúdo oculto -->
+          <div id="saiba-mais" style="display: none; margin-top: 15px; margin: 2vh 0vw 0vh 2.9vw;">
+            <h3 id="tituloh3">Validação Científica da Aeroterapia</h3>
+            <p>
+              A Terapia de Exposição em Realidade Virtual (VRET) já apresenta eficácia comprovada no tratamento de fobias específicas. 
+              De acordo com o <em>Journal of Anxiety Disorders (2021)</em>, aproximadamente 74% dos pacientes apresentam melhora significativa após o tratamento. 
+              Um exemplo prático é a startup espanhola Psious, que aplica essa tecnologia em mais de mil clínicas, com resultados altamente positivos.
+            </p>
+            <p>
+              A integração de sensores biométricos, como monitoramento da frequência cardíaca e da resposta galvânica da pele, aumenta a precisão terapêutica. 
+              Dispositivos como o headband Muse (com leitura de EEG) já são utilizados como ferramentas de biofeedback durante as sessões.
+            </p>
+            <p>
+              A Realidade Aumentada (AR) também tem sido aplicada em contextos como simulações de interações sociais e ambientes com grandes multidões. 
+              Pesquisas da Stanford University reforçam a eficácia desse recurso no tratamento de fobias sociais.
+            </p>
+
+            <h3  id="tituloh3">Referências e Benchmarking de Mercado</h3>
+            <p>Algumas empresas têm se destacado globalmente no uso da VR para saúde mental, como:</p>
+            <ul>
+              <li><strong>Oxford VR (Reino Unido):</strong> Desenvolve soluções digitais para ansiedade e depressão.</li>
+              <li><strong>Limbix (EUA):</strong> Plataforma voltada para adolescentes e jovens adultos com foco em VRET.</li>
+            </ul>
+            <p>
+              Os resultados clínicos são promissores. Estudos apontam redução de até 40% nos ataques de pânico após 4 a 6 sessões de VRET, especialmente em casos de fobia de voo.
+            </p>
+
+            <h3 id="tituloh3">Análise de Concorrência e Modelos de Negócio</h3>
+            <p>O mercado de terapias imersivas vem crescendo, com destaque para startups como:</p>
+            <ul>
+              <li><strong>Oxford VR:</strong> Especializada em fobias sociais.</li>
+              <li><strong>XRHealth:</strong> Oferece tratamentos com VR reembolsados por planos de saúde nos EUA.</li>
+            </ul>
+            <p>Entre os modelos de negócio mais utilizados estão:</p>
+            <ul>
+              <li><strong>B2B:</strong> Licenciamento de plataformas para clínicas (como a Psious, que cobra cerca de €1.000 por mês).</li>
+              <li><strong>B2C:</strong> Assinaturas diretas ao consumidor, como o Healium (US$ 9,99 por semana).</li>
+            </ul>
+
+            <h3 id="tituloh3">Potenciais Parcerias Estratégicas</h3>
+            <p>Existem diversas oportunidades de integração da Aeroterapia com grandes players:</p>
+            <ul>
+              <li><strong>Companhias Aéreas:</strong> Treinamentos e sessões preparatórias para passageiros com medo de voar — empresas como Gol e Azul poderiam ser parceiras.</li>
+              <li><strong>Planos de Saúde:</strong> Inclusão de terapias digitais em pacotes de cobertura, modelo semelhante ao adotado pela Amil.</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Imagem à direita -->
+        <div class="img" style="flex: 1; min-width: 200px; max-width: 600px; text-align: center;">
+          <img src="aeroterapia.jpg.png" alt="Banner do Projeto MindHealth" class="img-img">
+        </div>
       </div>
-
-      <!-- Botão -->
-      <button onclick="toggleSaibaMais()" 
-              style="margin: 20px 0; padding: 10px 20px; background-color: white; color: #003366; border: 2px solid #003366; border-radius: 8px; font-size: 16px; cursor: pointer;">
-        Saiba mais
-      </button>
-
-      <!-- Conteúdo oculto -->
-      <div id="saiba-mais" style="display: none; margin-top: 15px;">
-        <h3 id="tituloh3">Validação Científica da Aeroterapia</h3>
-        <p>
-          A Terapia de Exposição em Realidade Virtual (VRET) já apresenta eficácia comprovada no tratamento de fobias específicas. 
-          De acordo com o <em>Journal of Anxiety Disorders (2021)</em>, aproximadamente 74% dos pacientes apresentam melhora significativa após o tratamento. 
-          Um exemplo prático é a startup espanhola Psious, que aplica essa tecnologia em mais de mil clínicas, com resultados altamente positivos.
-        </p>
-        <p>
-          A integração de sensores biométricos, como monitoramento da frequência cardíaca e da resposta galvânica da pele, aumenta a precisão terapêutica. 
-          Dispositivos como o headband Muse (com leitura de EEG) já são utilizados como ferramentas de biofeedback durante as sessões.
-        </p>
-        <p>
-          A Realidade Aumentada (AR) também tem sido aplicada em contextos como simulações de interações sociais e ambientes com grandes multidões. 
-          Pesquisas da Stanford University reforçam a eficácia desse recurso no tratamento de fobias sociais.
-        </p>
-
-        <h3 id="tituloh3">Referências e Benchmarking de Mercado</h3>
-        <p>Algumas empresas têm se destacado globalmente no uso da VR para saúde mental, como:</p>
-        <ul>
-          <li><strong>Oxford VR (Reino Unido):</strong> Desenvolve soluções digitais para ansiedade e depressão.</li>
-          <li><strong>Limbix (EUA):</strong> Plataforma voltada para adolescentes e jovens adultos com foco em VRET.</li>
-        </ul>
-        <p>
-          Os resultados clínicos são promissores. Estudos apontam redução de até 40% nos ataques de pânico após 4 a 6 sessões de VRET, especialmente em casos de fobia de voo.
-        </p>
-
-        <h3 id="tituloh3">Análise de Concorrência e Modelos de Negócio</h3>
-        <p>O mercado de terapias imersivas vem crescendo, com destaque para startups como:</p>
-        <ul>
-          <li><strong>Oxford VR:</strong> Especializada em fobias sociais.</li>
-          <li><strong>XRHealth:</strong> Oferece tratamentos com VR reembolsados por planos de saúde nos EUA.</li>
-        </ul>
-        <p>Entre os modelos de negócio mais utilizados estão:</p>
-        <ul>
-          <li><strong>B2B:</strong> Licenciamento de plataformas para clínicas (como a Psious, que cobra cerca de €1.000 por mês).</li>
-          <li><strong>B2C:</strong> Assinaturas diretas ao consumidor, como o Healium (US$ 9,99 por semana).</li>
-        </ul>
-
-        <h3 id="tituloh3">Potenciais Parcerias Estratégicas</h3>
-        <p>Existem diversas oportunidades de integração da Aeroterapia com grandes players:</p>
-        <ul>
-          <li><strong>Companhias Aéreas:</strong> Treinamentos e sessões preparatórias para passageiros com medo de voar — empresas como Gol e Azul poderiam ser parceiras.</li>
-          <li><strong>Planos de Saúde:</strong> Inclusão de terapias digitais em pacotes de cobertura, modelo semelhante ao adotado pela Amil.</li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</div>
-
       
-<div class="pilar par" style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
-  <div class="texto" style="flex: 1; min-width: 300px;">
-    <div class="color2" style="flex: 1; min-width: 300px; border-top: 6px solid #3399ff; background-color: #e6f0ff; padding: 20px;">
-      <h2 id="subtitulo-pilares">2. Suporte Comunitário</h2>
-      <p id="texto-pilares">
-        A conexão com pessoas que compartilham experiências semelhantes é essencial no processo terapêutico. 
-        O suporte comunitário oferece acolhimento, empatia e encorajamento mútuo, tornando o tratamento mais eficaz.
-      </p>
-      <p id="texto-pilares">
-        Nossa plataforma proporciona espaços seguros para essa troca, com acompanhamento profissional e mediação emocional.
-        A construção de uma rede de apoio fortalece a resiliência e contribui para um progresso mais consistente e humano.
-      </p>
-
-      <!-- Imagem -->
-      <div style="text-align: center; margin-top: 20px;">
-        <img src="OIP.jpeg.png" alt="Suporte Comunitário" style="max-width: 100%; height: auto;">
-      </div>
+   <div class="pilar par">
+    <div class="texto">
+       <div class="pilar par">
+    <div class="texto">
+            <p><h2 id="subtitulo-pilares">2. Suporte Comunitário</h2>
+        <p id="texto-pilares">
+            A conexão com pessoas que compartilham experiências semelhantes é essencial no processo terapêutico. 
+            O suporte comunitário oferece acolhimento, empatia e encorajamento mútuo, tornando o tratamento mais eficaz.
+        </p>
+        <p id="texto-pilares">
+            Nossa plataforma proporciona espaços seguros para essa troca, com acompanhamento profissional e mediação emocional.
+            A construção de uma rede de apoio fortalece a resiliência e contribui para um progresso mais consistente e humano.
+        </p>
     </div>
-  </div>
+        <div class="img" style="flex: 1; min-width: 200px; max-width: 600px; text-align: center;">
+        <img src="OIP.jpeg.png" alt="Suporte Comunitário" class="img-img">
+    </div>
 </div>
 
-    <div class="pilar" style="display: flex; flex-wrap: wrap; gap: 20px; margin-top: 20px;">
-  <div class="texto" style="flex: 1; min-width: 300px;">
-    <div class="color1" style="flex: 1; min-width: 300px; border-top: 6px solid #ff9900; background-color: #fff8ec; padding: 20px;">
-      <h2 id="subtitulo-pilares">3. Pesquisa e Desenvolvimento</h2>
-      <p id="texto-pilares">
-        Acreditamos que a inovação é essencial para tornar os tratamentos de saúde mental mais eficazes e acessíveis. Nosso setor de P&D investe em estudos clínicos, testes com usuários e parcerias com universidades para validar cientificamente nossas técnicas.
-      </p>
-      <p id="texto-pilares">
-        Acompanhamos os avanços em VR, AR, IA e biofeedback para desenvolver terapias personalizadas e baseadas em dados reais, respeitando o perfil de cada paciente. Também monitoramos indicadores fisiológicos, como frequência cardíaca e estresse, para garantir intervenções seguras e adaptativas.
-      </p>
-      <p id="texto-pilares">
-        Nosso objetivo é democratizar o acesso à saúde mental com soluções tecnológicas validadas e centradas no ser humano.
-      </p>
+    <div class="pilar"> 
+        <div class="texto">
+            <p><h2 id="subtitulo-pilares">3. Pesquisa e Desenvolvimento</h2>
+<p id="texto-pilares">
+    Acreditamos que a inovação é essencial para tornar os tratamentos de saúde mental mais eficazes e acessíveis. Nosso setor de P&D investe em estudos clínicos, testes com usuários e parcerias com universidades para validar cientificamente nossas técnicas.
+</p>
+<p id="texto-pilares">
+    Acompanhamos os avanços em VR, AR, IA e biofeedback para desenvolver terapias personalizadas e baseadas em dados reais, respeitando o perfil de cada paciente. Também monitoramos indicadores fisiológicos, como frequência cardíaca e estresse, para garantir intervenções seguras e adaptativas.
+</p>
+<p id="texto-pilares">
+    Nosso objetivo é democratizar o acesso à saúde mental com soluções tecnológicas validadas e centradas no ser humano.
+</p>
 
-      <!-- Imagem -->
-      <div style="text-align: center; margin-top: 20px;">
-        <img src="Inovacao-tecnologica-capa-1-1.jpg.png" alt="Banner do Projeto MindHealth" style="max-width: 100%; height: auto;">
-      </div>
+        </div>
+        <div class="img" style="flex: 1; min-width: 200px; max-width: 600px; text-align: center;">
+        <img src="Inovacao-tecnologica-capa-1-1.jpg.png" alt="Banner do Projeto MindHealth" class="img-img">
+        </div>
     </div>
-  </div>
-</div>
    <script>
     document.addEventListener("DOMContentLoaded", () => {
       // Função para mostrar/ocultar o conteúdo "Saiba Mais"
@@ -497,12 +435,3 @@ Graças à ajuda da MindHealht, posso me orgulhar por ter superado e aprendido a
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
